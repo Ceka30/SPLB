@@ -1,4 +1,3 @@
-import json
 import time
 from behave import given, step, when, then
 from utils.utils import attach_screenshot
@@ -14,6 +13,7 @@ from config.settings import (
     CHILE_URL_ENTEL_MOVIL_PLAN_ADICIONAL,
     CHILE_URL_ENTEL_OFERTAS_MOVIL,
     CHILE_URL_ENTEL_HOME,
+    PERU_URL_ENTEL_HOME,
 )
 
 sitios = {
@@ -21,6 +21,11 @@ sitios = {
         "Explora Mundo Móvil y Hogar",
         lambda context: context.chile_topo_fab_home_page.get_text_titulo_home(),
         "chile",
+    ],
+    PERU_URL_ENTEL_HOME: [
+        "Quiero ser cliente",
+        lambda context: context.peru_topo_fab_home_page.get_text_titulo_home(),
+        "peru",
     ],
     CHILE_URL_ENTEL_HOGAR_INTERNET: [
         "Planes Internet Hogar",
@@ -88,7 +93,9 @@ def step_ingreso_a_la_pagina(context, URL):
             case "CHILE_URL_ENTEL_MOVIL_PORTABILIDAD":
                 context.modulo = "portabilidad"
             case "CHILE_URL_ENTEL_HOME":
-                context.modulo = "home"
+                context.modulo = "home_chile"
+            case "PERU_URL_ENTEL_HOME":
+                context.modulo = "home_peru"
 
         texto_esperado, get_titulo, pais = datos
         context.pais = pais
