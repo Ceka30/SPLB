@@ -32,6 +32,7 @@ from pages.chile_pages.contratacion_movil_page import chile_contratacion_movil_p
 from pages.chile_pages.ofertas_movil_page import chile_ofertas_movil_page
 from pages.chile_pages.topo_fab_home_page import chile_topo_fab_home_page
 from pages.peru_pages.topo_fab_home_page import peru_topo_fab_home_page
+from pages.peru_pages.home_page import peru_home_page
 
 # from config.browser_handler import browser_handler
 
@@ -227,3 +228,4 @@ def init_config(context, scenario):
     context.chile_ofertas_movil_page = chile_ofertas_movil_page(driver)
     context.chile_topo_fab_home_page = chile_topo_fab_home_page(driver)
     context.peru_topo_fab_home_page = peru_topo_fab_home_page(driver)
+    context.peru_home_page = peru_home_page(driver)
