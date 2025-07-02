@@ -1,7 +1,4 @@
-import random
-import time
 from pages.base_page import base_page
-from selenium.webdriver.common.action_chains import ActionChains
 
 
 class chile_contratacion_movil_page(base_page):
@@ -66,7 +63,7 @@ class chile_contratacion_movil_page(base_page):
         except Exception as ex:
             raise Exception(str(ex))
 
-    def send_keys_input_telefono(self, telefono):
+    def send_keys_input_telefono(self, texto):
         try:
             super().carga_pagina()
             element = self.wait_until_element_is_visible(self.input_telefono)
@@ -74,18 +71,8 @@ class chile_contratacion_movil_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            self.driver.execute_script(
-                "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'})",
-                element,
-            )
-            ActionChains(self.driver).move_to_element(element).pause(
-                random.uniform(0.5, 2)
-            ).click().perform()
-
-            # Escribir dígito por dígito con pausas
-            for digito in telefono:
-                element.send_keys(digito)
-                time.sleep(random.uniform(0.5, 2))
+            element.location_once_scrolled_into_view
+            element.send_keys(texto)
         except Exception as ex:
             raise Exception(str(ex))
 

@@ -1,5 +1,5 @@
 @CHILE_PERU_B2C_C2C_HOGAR
-Feature: CHILE B2C Click to Call 
+Feature: CHILE B2C Click to Call Hogar 
 
 @CHILE_B2C_C2C_InternetHogar
 Scenario Outline: CHILE C2C Internet Hogar

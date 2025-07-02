@@ -74,7 +74,7 @@ sitios = {
     ],
     CHILE_URL_ENTEL_OFERTAS_MOVIL: [
         "Portabilidad con plan",
-        lambda context: context.chile_ofertas_movil_page.get_text_titulo_ofertas_movil(),
+        lambda context: context.chile_planes_portabilidad_page.get_text_titulo_planes_oferta_portabilidad(),
         "chile",
     ],
 }
@@ -100,7 +100,7 @@ def step_ingreso_a_la_pagina(context, URL):
         texto_esperado, get_titulo, pais = datos
         context.pais = pais
         context.driver.get(globals()[URL])
-
+        time.sleep(1)
         assert texto_esperado in get_titulo(context)
         attach_screenshot(context.driver)
     except AssertionError as ex:

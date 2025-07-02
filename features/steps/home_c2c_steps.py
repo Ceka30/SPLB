@@ -15,7 +15,7 @@ def completo_con_mi_numero_de_contacto(context):
                     context.peru_home_page.get_text_titulo_solicitud_ingresada
                 )
 
-        time.sleep(1)
+        time.sleep(2)
         attach_screenshot(context.driver)
         click_lo_quiero()
         time.sleep(2)

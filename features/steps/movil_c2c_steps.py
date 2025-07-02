@@ -137,7 +137,7 @@ def completo_formulario_de_contacto(context):
                 modalidad = {
                     "portabilidad": {
                         "ingresar_telefono": lambda: context.chile_contratacion_movil_page.send_keys_input_telefono(
-                            "9959595959"
+                            "995959595"
                         ),
                         "enviar_solicitud": context.chile_contratacion_movil_page.click_boton_boton_quiero_que_me_llamen,
                         "solicitud_ingresada": lambda: "¡Recibimos tu solicitud!"
@@ -145,7 +145,7 @@ def completo_formulario_de_contacto(context):
                     },
                     "linea_adicional": {
                         "ingresar_telefono": lambda: context.chile_planes_plan_adicional_page.send_keys_input_telefono(
-                            "9959595959"
+                            "959595959"
                         ),
                         "enviar_solicitud": context.chile_planes_plan_adicional_page.click_boton_quiero_que_me_llamen,
                         "solicitud_ingresada": lambda: "¡Recibimos tu solicitud!"
@@ -157,7 +157,7 @@ def completo_formulario_de_contacto(context):
                 modalidad = {
                     "portabilidad": {
                         "ingresar_telefono": lambda: context.peru_contratacion_movil_page.send_keys_input_telefono(
-                            "9959595959"
+                            "995959595"
                         ),
                         "enviar_solicitud": context.peru_contratacion_movil_page.click_boton_llamenme_ahora,
                         "solicitud_ingresada": lambda: "Te llamaremos pronto"
@@ -165,7 +165,7 @@ def completo_formulario_de_contacto(context):
                     },
                     "linea_adicional": {
                         "ingresar_telefono": lambda: context.peru_planes_postpago_page.send_keys_input_telefono(
-                            "9959595959"
+                            "959595959"
                         ),
                         "enviar_solicitud": context.peru_planes_postpago_page.click_boton_llamenme_ahora,
                         "solicitud_ingresada": lambda: "Te llamaremos pronto"
