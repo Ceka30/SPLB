@@ -1,36 +1,40 @@
+import time
 from pages.base_page import base_page
 
 
-class chile_contratacion_movil_page(base_page):
+class chile_login_miportal_page(base_page):
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
 
-        # Titulo Acceso Contratacion Online
-        self.titulo_contratacion_movil = 'document.querySelector("#root > section > div > div > div.plan-container.bg-white.col-12.col-lg-5.p-0 > div > div > div > h2")'
+        # Titulo Login Mi Portal
+        self.titulo_login_miportal = 'document.querySelector("#identification-div > div > div.row.justify-content-center > div > span")'
 
-        # Boton C2C
-        self.boton_C2C = 'document.querySelector("#portabilidad-1-0 > div > div.c2c-flow.mb-3 > andino-card-sm").shadowRoot.querySelector("div > div.content > andino-text-styler.title").shadowRoot.querySelector("p > span")'
+        # Boton Soy Cliente
+        self.boton_soy_cliente = 'document.querySelector("#client")'
 
-        # Boton Contratar en linea
-        self.boton_contratar_en_linea = 'document.querySelector("#portabilidad-1-0 > div > div.digital-flow.mb-3 > andino-card-sm")'
+        # Boton Ingresar con contreseña
+        self.boton_ingresar_con_contraseña = 'document.querySelector("#identification-div > div > div.row.justify-content-center > div > div.card.mb-3 > div > button.btn.btn-outline-primary.btn-block.fw-6.mb-3")'
 
-        # Titulo Formulario
-        self.titulo_formulario = 'document.querySelector("#root > section > div > div > div.flow-container.bg-neutral-050.col-12.col-lg-7.p-0 > div > div > div.form-c2c.mb-4 > p")'
+        # Input Rut
+        self.input_rut = 'document.querySelector("#identificationNumber")'
 
         # Input telefono
-        self.input_telefono = 'document.querySelector("#phoneC2c")'
+        self.input_telefono = 'document.querySelector("#phoneNumber")'
 
-        # Boton "Quiero que me llamen"
-        self.boton_quiero_que_me_llamen = 'document.querySelector("#formC2C > eds-btn")'
+        # Input Contraseña
+        self.input_contraseña = 'document.querySelector("#password")'
 
-        # Titulo solicitud ingresada
-        self.titulo_solicitud_ingresada = 'document.querySelector("#root > section > div > div > div.flow-container.bg-neutral-050.col-12.col-lg-7.p-0 > div > div > div > div > h3")'
+        # Boton Identificaion
+        self.boton_identificacion = 'document.querySelector("#identification-div > div > div.row.justify-content-center > div > div.card.mb-4 > div > div.btn-con > button.default-button.btn-radius.rounded-pill.font-weight-bold.mb-4")'
 
-    def get_text_titulo_contratacion_movil(self):
+        # loader
+        self.loader = 'document.querySelector("#loader > div")'
+
+    def get_text_titulo_login_miportal(self):
         try:
             super().carga_pagina()
-            element = self.wait_until_element_is_visible(self.titulo_contratacion_movil)
+            element = self.wait_until_element_is_visible(self.titulo_login_miportal)
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
@@ -40,10 +44,10 @@ class chile_contratacion_movil_page(base_page):
         except Exception as ex:
             raise Exception(str(ex))
 
-    def click_boton_C2C(self):
+    def click_boton_soy_cliente(self):
         try:
             super().carga_pagina()
-            element = self.wait_until_element_is_visible(self.boton_C2C)
+            element = self.wait_until_element_is_visible(self.boton_soy_cliente)
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
@@ -53,10 +57,12 @@ class chile_contratacion_movil_page(base_page):
         except Exception as ex:
             raise Exception(str(ex))
 
-    def click_boton_contratar_en_linea(self):
+    def click_boton_ingresar_con_contraseña(self):
         try:
             super().carga_pagina()
-            element = self.wait_until_element_is_visible(self.boton_contratar_en_linea)
+            element = self.wait_until_element_is_visible(
+                self.boton_ingresar_con_contraseña
+            )
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
@@ -66,16 +72,16 @@ class chile_contratacion_movil_page(base_page):
         except Exception as ex:
             raise Exception(str(ex))
 
-    def get_text_titulo_formulario(self):
+    def send_keys_input_rut(self, texto):
         try:
             super().carga_pagina()
-            element = self.wait_until_element_is_visible(self.titulo_formulario)
+            element = self.wait_until_element_is_visible(self.input_rut)
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
             element.location_once_scrolled_into_view
-            return element.text
+            element.send_keys(texto)
         except Exception as ex:
             raise Exception(str(ex))
 
@@ -92,12 +98,23 @@ class chile_contratacion_movil_page(base_page):
         except Exception as ex:
             raise Exception(str(ex))
 
-    def click_boton_boton_quiero_que_me_llamen(self):
+    def send_keys_input_contraseña(self, texto):
         try:
             super().carga_pagina()
-            element = self.wait_until_element_is_visible(
-                self.boton_quiero_que_me_llamen
-            )
+            element = self.wait_until_element_is_visible(self.input_contraseña)
+            if not super().is_displayed(element):
+                print("Elemento no Desplegado.")
+            if not super().is_enabled(element):
+                print("Elemento no Disponible.")
+            element.location_once_scrolled_into_view
+            element.send_keys(texto)
+        except Exception as ex:
+            raise Exception(str(ex))
+
+    def click_boton_identificacion(self):
+        try:
+            super().carga_pagina()
+            element = self.wait_until_element_is_visible(self.boton_identificacion)
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
@@ -107,17 +124,11 @@ class chile_contratacion_movil_page(base_page):
         except Exception as ex:
             raise Exception(str(ex))
 
-    def get_text_titulo_solicitud_ingresada(self):
+    def wait_loader(self):
         try:
             super().carga_pagina()
-            element = self.wait_until_element_is_visible(
-                self.titulo_solicitud_ingresada
-            )
-            if not super().is_displayed(element):
-                print("Elemento no Desplegado.")
-            if not super().is_enabled(element):
-                print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
-            return element.text
-        except Exception as ex:
-            raise Exception(str(ex))
+            element = self.wait_until_element_is_visible(self.loader)
+            while element.is_displayed():
+                time.sleep(1)
+        except Exception:
+            pass
