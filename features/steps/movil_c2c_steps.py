@@ -38,7 +38,9 @@ def selecciono_el_plan_movil(context, plan):
             case "chile":
                 get_titulo = context.chile_contratacion_movil_page.get_text_titulo_contratacion_movil
             case "peru":
-                get_titulo = context.peru_internet_hogar_page.get_text_titulo_modal_c2c
+                get_titulo = (
+                    context.peru_contratacion_movil_page.get_text_titulo_contratacion
+                )
 
         assert plan.strip() in get_titulo()
         attach_screenshot(context.driver)

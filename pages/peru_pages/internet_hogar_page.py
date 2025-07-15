@@ -7,13 +7,13 @@ class peru_internet_hogar_page(base_page):
         self.driver = driver
 
         # Titulo Internet Hogar
-        self.titulo_internet_hogar = 'document.querySelector("#custom > main > section:nth-child(3) > andino-banner-seccion-full > andino-text:nth-child(1)")'
+        self.titulo_internet_hogar = 'document.querySelector("#custom > main > section:nth-child(6) > andino-banner-seccion-full > andino-text:nth-child(1) > h1 > span")'
 
         # Boton Fibra 100 Mbps
-        self.boton_fibra_100_mbps = 'document.querySelector("#custom > main > section.bg-section-planes.py-5.mt-0.mb-0 > div > swiper-container > swiper-slide.swiper-slide-active > andino-card-planes-ecommerce").shadowRoot.querySelector("div > div.content > div.header > andino-button")'
+        self.boton_fibra_100_mbps = 'document.querySelector("#custom > main > section.bg-section-planes.py-5.mt-0.mb-0 > div > swiper-container > swiper-slide.swiper-slide-active > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
 
-        # Boton Fibra 200 Mbps
-        self.boton_fibra_200_mbps = 'document.querySelector("#custom > main > section.bg-section-planes.py-5.mt-0.mb-0 > div > swiper-container > swiper-slide.swiper-slide-next > andino-card-planes-ecommerce").shadowRoot.querySelector("div > div.content > div.header > andino-button")'
+        # Boton Fibra 300 Mbps
+        self.boton_fibra_300_mbps = 'document.querySelector("#custom > main > section.bg-section-planes.py-5.mt-0.mb-0 > div > swiper-container > swiper-slide.swiper-slide-next > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
 
         # Titulo Modal C2C
         self.titulo_modal_c2c = 'document.querySelector("#modal_card_planes_ecommerce > div > div > andino-text-styler")'
@@ -56,10 +56,10 @@ class peru_internet_hogar_page(base_page):
         except Exception as ex:
             raise Exception(str(ex))
 
-    def click_boton_fibra_200_mbps(self):
+    def click_boton_fibra_300_mbps(self):
         try:
             super().carga_pagina()
-            element = self.wait_until_element_is_visible(self.boton_fibra_200_mbps)
+            element = self.wait_until_element_is_visible(self.boton_fibra_300_mbps)
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):

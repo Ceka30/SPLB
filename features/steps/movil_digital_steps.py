@@ -3,8 +3,8 @@ from behave import step, then
 from utils.utils import attach_screenshot
 
 
-@step("contratar en linea")
-def contratar_en_linea(context):
+@step("selecciono contratar online movil")
+def step_selecciono_contratar_online_movil(context):
     try:
         context.chile_contratacion_movil_page.click_boton_contratar_en_linea()
         time.sleep(1)
@@ -19,7 +19,9 @@ def contratar_en_linea(context):
 
 
 @then('ingreso como cliente y recibo el resumen de contratacion del plan "{plan}"')
-def ingreso_como_cliente_y_recibo_el_resumen_de_contratacion_del_plan(context, plan):
+def step_ingreso_como_cliente_y_recibo_el_resumen_de_contratacion_del_plan(
+    context, plan
+):
     try:
         context.chile_login_miportal_page.click_boton_soy_cliente()
         time.sleep(1)

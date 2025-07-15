@@ -23,7 +23,7 @@ class peru_topo_fab_home_page(base_page):
         self.titulo_te_ayudamos_a_contratar = 'document.querySelector("#modalMovilDinamic").shadowRoot.querySelector("div > div.eds-modal-passive__content.col-12.col-sm-12.col-md-12.col-lg-10.col-xl-4.col-xxl-4 > div > p")'
 
         # Input Telefono
-        self.input_telefono = 'document.querySelector("#inputMovilForm").shadowRoot.querySelector("#andino-input-inputMovilForm")'
+        self.input_telefono = 'document.querySelector("#inputMovilFormFab").shadowRoot.querySelector("#andino-input-inputMovilFormFab")'
 
         # Boton "Quiero que me llamen"
         self.boton_quiero_que_me_llamen = (

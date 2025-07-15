@@ -14,6 +14,7 @@ from config.settings import (
     CHILE_URL_ENTEL_OFERTAS_MOVIL,
     CHILE_URL_ENTEL_HOME,
     PERU_URL_ENTEL_HOME,
+    PERU_URL_ENTEL_MOVIL_LINEAS_ADICIONALES,
 )
 
 sitios = {
@@ -67,6 +68,11 @@ sitios = {
         lambda context: context.peru_planes_postpago_page.get_text_titulo_planes_postpago_portabilidad(),
         "peru",
     ],
+    PERU_URL_ENTEL_MOVIL_LINEAS_ADICIONALES: [
+        "Líneas Adicionales",
+        lambda context: context.peru_planes_postpago_page.get_text_titulo_planes_postpago_linea_adicional(),
+        "peru",
+    ],
     CHILE_URL_ENTEL_MOVIL_PLAN_ADICIONAL: [
         "Plan adicional con descuento",
         lambda context: context.chile_planes_portabilidad_page.get_text_titulo_planes_oferta_portabilidad(),
@@ -100,7 +106,7 @@ def step_ingreso_a_la_pagina(context, URL):
         texto_esperado, get_titulo, pais = datos
         context.pais = pais
         context.driver.get(globals()[URL])
-        time.sleep(1)
+        time.sleep(2)
         assert texto_esperado in get_titulo(context)
         attach_screenshot(context.driver)
     except AssertionError as ex:
@@ -176,7 +182,7 @@ def step_selecciono_el_tipo_de_plan(context, tipo_plan):
             "fibra giga tv full+": context.chile_doble_pack_page.click_boton_fibra_giga_tv_full_plus,
             "tv full +": context.chile_television_page.click_boton_tv_full_plus,
             "fibra 100 mbps": context.peru_internet_hogar_page.click_boton_fibra_100_mbps,
-            "fibra 200 mbps": context.peru_internet_hogar_page.click_boton_fibra_200_mbps,
+            "fibra 300 mbps": context.peru_internet_hogar_page.click_boton_fibra_300_mbps,
         }
 
         sitio_peru = {
@@ -184,7 +190,7 @@ def step_selecciono_el_tipo_de_plan(context, tipo_plan):
                 "texto_esperado": "¡Contrata Internet\npara tu Hogar!",
                 "get_titulo": context.peru_internet_hogar_page.get_text_titulo_modal_c2c,
             },
-            "fibra 200 mbps": {
+            "fibra 300 mbps": {
                 "texto_esperado": "¡Contrata Internet\npara tu Hogar!",
                 "get_titulo": context.peru_internet_hogar_page.get_text_titulo_modal_c2c,
             },

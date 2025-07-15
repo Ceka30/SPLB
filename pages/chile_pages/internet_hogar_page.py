@@ -7,13 +7,13 @@ class internet_hogar_page(base_page):
         self.driver = driver
 
         # Titulo Internet Hogar
-        self.titulo_internet_hogar = 'document.querySelector("#banner-seccion-principal > andino-text:nth-child(1)")'
+        self.titulo_internet_hogar = 'document.querySelector("#banner-seccion-principal-1 > andino-text:nth-child(1) > h1 > span")'
 
         # Radio Button Sin Disney+
         self.boton_radio_sin_disney_plus = 'document.querySelector("#radio-planes-1").shadowRoot.querySelector("div > andino-input-label")'
 
         # Radio Button Con Disney+
-        self.boton_radio_con_disney_plus = 'document.querySelector("#radio-planes-2").shadowRoot.querySelector("div > andino-input-label")'
+        self.boton_radio_con_disney_plus = 'document.querySelector("#radio-planes-2").shadowRoot.querySelector("div > andino-input-label > andino-radio-button")'
 
         # Titulo Con Disney+
         self.titulo_con_disney_plus = 'document.querySelector("#banner-seccion-principal").shadowRoot.querySelector("div > div.container > div > div > div.channels > div.channels-text > p")'

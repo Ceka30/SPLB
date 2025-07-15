@@ -12,6 +12,7 @@
     "CHILE_URL_ENTEL_MOVIL_PORTABILIDAD": "https://www.entel.cl/planes/oferta-portabilidad",
     "CHILE_URL_ENTEL_MOVIL_PLAN_ADICIONAL": "https://www.entel.cl/planes/plan-adicional-con-descuento",
     "PERU_URL_ENTEL_MOVIL": "https://www.entel.pe/planes/postpago",
+    "PERU_URL_ENTEL_MOVIL_LINEAS_ADICIONALES": "https://www.entel.pe/planes/postpago?modalidad=lineas-adicionales-postpago",
     "CHILE_URL_ENTEL_OFERTAS_MOVIL": "https://www.entel.cl/ofertas/planes-moviles",
     "CHILE_URL_ENTEL_CONTRATACION_600": "https://www.entel.cl/hogar/contrataciononline?id=internet-fibra-600-megas&lineas=1&oda=internet_card1&gen=hogar__internet",
     "CHILE_URL_ENTEL_CONTRATACION_600Plus": "https://www.entel.cl/hogar/contrataciononline?id=internet-fibra-600-megas-streaming&lineas=1&oda=internet_card1&gen=hogar__internet"
