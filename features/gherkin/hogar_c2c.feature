@@ -63,13 +63,18 @@ Feature: CHILE B2C Click to Call Hogar
             | URL        | TIPO_PLAN | 
             | Television | TV Full + |
 
-    @PERU_B2C_C2C_InternetHogar
+    @PERU_Monitoring @PERU_B2C_C2C_InternetHogar
     Scenario Outline: PERU C2C Internet Hogar
         Given estoy en la pagina "<URL>"
         When selecciono el tipo de plan "<TIPO_PLAN>"
         Then ingreso la solicitud de contacto
 
+        @PERU_B2C_C2C_InternetHogar_Fibra_100_Mbps
         Examples:
             | URL                           | TIPO_PLAN       |
             | PERU_URL_ENTEL_HOGAR_INTERNET | Fibra 100 Mbps  |
+
+        @PERU_B2C_C2C_InternetHogar_Fibra_300_Mbps
+        Examples:
+            | URL                           | TIPO_PLAN       |
             | PERU_URL_ENTEL_HOGAR_INTERNET | Fibra 300 Mbps  |

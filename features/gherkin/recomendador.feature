@@ -151,78 +151,78 @@ Feature: CHILE B2C Recomenador
 
         Examples:
             | URL                          | SERVICIO           | TIPO_HOGAR   | PISOS_HOGAR   | ESPACIOS         | DISPOSITIVOS              | UTILIZACION | DISNEY_PREMIUM | PLAN_IDEAL  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Menos de 8 dispositivos   | Basico      | No             | Fibra 600   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Menos de 8 dispositivos   | Basico      | Si             | Fibra 600+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Menos de 8 dispositivos   | Alto        | No             | Fibra 600   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Menos de 8 dispositivos   | Alto        | Si             | Fibra 600+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Menos de 8 dispositivos   | Basico      | No             | Fibra 600   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Menos de 8 dispositivos   | Basico      | Si             | Fibra 600+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Menos de 8 dispositivos   | Alto        | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Menos de 8 dispositivos   | Alto        | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Menos de 8 dispositivos   | Basico      | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Menos de 8 dispositivos   | Basico      | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Menos de 8 dispositivos   | Alto        | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Menos de 8 dispositivos   | Alto        | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Menos de 8 dispositivos   | Basico      | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Menos de 8 dispositivos   | Basico      | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Menos de 8 dispositivos   | Alto        | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Menos de 8 dispositivos   | Alto        | Si             | Fibra 800+  |
-            # RESULTADO DISTINTO AL QUE CORRESPONDE --> CORREGIDO
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Menos de 8 dispositivos   | Basico      | No             | Fibra 600   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Menos de 8 dispositivos   | Basico      | Si             | Fibra 600+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Menos de 8 dispositivos   | Alto        | No             | Fibra 600   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Menos de 8 dispositivos   | Alto        | Si             | Fibra 600+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Menos de 8 dispositivos   | Basico      | No             | Fibra 600   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Menos de 8 dispositivos   | Basico      | Si             | Fibra 600+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Menos de 8 dispositivos   | Alto        | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Menos de 8 dispositivos   | Alto        | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Menos de 8 dispositivos   | Basico      | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Menos de 8 dispositivos   | Basico      | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Menos de 8 dispositivos   | Alto        | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Menos de 8 dispositivos   | Alto        | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Menos de 8 dispositivos   | Basico      | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Menos de 8 dispositivos   | Basico      | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Menos de 8 dispositivos   | Alto        | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Menos de 8 dispositivos   | Alto        | Si             | Fibra 800+  |
+            # RESULTADO DISTINTO AL QUE CORRESPONDE --> NO CORREGIDO
             | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Menos de 8 dispositivos   | Basico      | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Menos de 8 dispositivos   | Basico      | Si             | Fibra 800+  |
-            # RESULTADO DISTINTO AL QUE CORRESPONDE --> CORREGIDO
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Menos de 8 dispositivos   | Basico      | Si             | Fibra 800+  |
+            # RESULTADO DISTINTO AL QUE CORRESPONDE --> NO CORREGIDO
             | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Menos de 8 dispositivos   | Alto        | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Menos de 8 dispositivos   | Alto        | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Menos de 8 dispositivos   | Basico      | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Menos de 8 dispositivos   | Basico      | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Menos de 8 dispositivos   | Alto        | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Menos de 8 dispositivos   | Alto        | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Entre 8 y 16 dispositivos | Basico      | No             | Fibra 600   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra 600+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Entre 8 y 16 dispositivos | Alto        | No             | Fibra 600   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra 600+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Entre 8 y 16 dispositivos | Basico      | No             | Fibra 600   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra 600+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Entre 8 y 16 dispositivos | Alto        | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Entre 8 y 16 dispositivos | Basico      | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Entre 8 y 16 dispositivos | Alto        | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Entre 8 y 16 dispositivos | Basico      | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Entre 8 y 16 dispositivos | Alto        | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra 800+  |
-            # RESULTADO DISTINTO AL QUE CORRESPONDE --> CORREGIDO
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Menos de 8 dispositivos   | Alto        | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Menos de 8 dispositivos   | Basico      | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Menos de 8 dispositivos   | Basico      | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Menos de 8 dispositivos   | Alto        | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Menos de 8 dispositivos   | Alto        | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Entre 8 y 16 dispositivos | Basico      | No             | Fibra 600   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra 600+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Entre 8 y 16 dispositivos | Alto        | No             | Fibra 600   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra 600+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Entre 8 y 16 dispositivos | Basico      | No             | Fibra 600   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra 600+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Entre 8 y 16 dispositivos | Alto        | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Entre 8 y 16 dispositivos | Basico      | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Entre 8 y 16 dispositivos | Alto        | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Entre 8 y 16 dispositivos | Basico      | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Entre 8 y 16 dispositivos | Alto        | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra 800+  |
+            # RESULTADO DISTINTO AL QUE CORRESPONDE --> NO CORREGIDO
             | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Entre 8 y 16 dispositivos | Basico      | No             | Fibra 800   | 
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Entre 8 y 16 dispositivos | Alto        | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Entre 8 y 16 dispositivos | Basico      | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Entre 8 y 16 dispositivos | Alto        | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Mas de 16 dispositivos    | Basico      | No             | Fibra 600   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Mas de 16 dispositivos    | Basico      | Si             | Fibra 600+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Mas de 16 dispositivos    | Alto        | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Mas de 16 dispositivos    | Alto        | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Mas de 16 dispositivos    | Basico      | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Mas de 16 dispositivos    | Basico      | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Mas de 16 dispositivos    | Alto        | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Mas de 16 dispositivos    | Alto        | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Mas de 16 dispositivos    | Basico      | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Mas de 16 dispositivos    | Basico      | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Mas de 16 dispositivos    | Alto        | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Mas de 16 dispositivos    | Alto        | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Mas de 16 dispositivos    | Basico      | No             | Fibra 800   |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Mas de 16 dispositivos    | Basico      | Si             | Fibra 800+  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Mas de 16 dispositivos    | Alto        | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Mas de 16 dispositivos    | Alto        | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Mas de 16 dispositivos    | Basico      | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Mas de 16 dispositivos    | Basico      | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Mas de 16 dispositivos    | Alto        | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Mas de 16 dispositivos    | Alto        | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Mas de 16 dispositivos    | Basico      | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Mas de 16 dispositivos    | Basico      | Si             | Fibra Giga+ |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Mas de 16 dispositivos    | Alto        | No             | Fibra Giga  |
-            | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Mas de 16 dispositivos    | Alto        | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Entre 8 y 16 dispositivos | Alto        | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Entre 8 y 16 dispositivos | Basico      | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Entre 8 y 16 dispositivos | Basico      | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Entre 8 y 16 dispositivos | Alto        | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Entre 8 y 16 dispositivos | Alto        | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Mas de 16 dispositivos    | Basico      | No             | Fibra 600   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Mas de 16 dispositivos    | Basico      | Si             | Fibra 600+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Mas de 16 dispositivos    | Alto        | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 1 espacio        | Mas de 16 dispositivos    | Alto        | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Mas de 16 dispositivos    | Basico      | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Mas de 16 dispositivos    | Basico      | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Mas de 16 dispositivos    | Alto        | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 3 espacios       | Mas de 16 dispositivos    | Alto        | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Mas de 16 dispositivos    | Basico      | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Mas de 16 dispositivos    | Basico      | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Mas de 16 dispositivos    | Alto        | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Departamento | 1 piso        | 5 o mas espacios | Mas de 16 dispositivos    | Alto        | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Mas de 16 dispositivos    | Basico      | No             | Fibra 800   |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Mas de 16 dispositivos    | Basico      | Si             | Fibra 800+  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Mas de 16 dispositivos    | Alto        | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 1 espacio        | Mas de 16 dispositivos    | Alto        | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Mas de 16 dispositivos    | Basico      | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Mas de 16 dispositivos    | Basico      | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Mas de 16 dispositivos    | Alto        | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 3 espacios       | Mas de 16 dispositivos    | Alto        | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Mas de 16 dispositivos    | Basico      | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Mas de 16 dispositivos    | Basico      | Si             | Fibra Giga+ |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Mas de 16 dispositivos    | Alto        | No             | Fibra Giga  |
+            # | CHILE_URL_ENTEL_RECOMENDADOR | Mono Pack Internet | Casa         | 2 pisos o mas | 5 o mas espacios | Mas de 16 dispositivos    | Alto        | Si             | Fibra Giga+ |

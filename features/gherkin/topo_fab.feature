@@ -34,7 +34,7 @@ Feature: CHILE B2C Topo Fab
             | URL                  |
             | CHILE_URL_ENTEL_HOME |
 
-    @PERU_B2C_TopoFab_Home
+    @PERU_Monitoring @PERU_B2C_TopoFab_Home
     Scenario Outline: PERU B2C Topo Fab Home
         Given estoy en la pagina "<URL>"
         When selecciono Topo/Fab ¿Quieres contratar?

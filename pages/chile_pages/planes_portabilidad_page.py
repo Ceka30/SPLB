@@ -7,26 +7,26 @@ class chile_planes_portabilidad_page(base_page):
         self.driver = driver
 
         # Titulo Planes Oferta Portabilidad
-        # self.titulo_planes_oferta_portabilidad = 'document.querySelector("#custom > main > section.contenedor-banner-seccion-transversal > div > andino-banner-seccion > andino-text:nth-child(1)")'
-        self.titulo_planes_oferta_portabilidad = 'document.querySelector("#conecta-a-quien > andino-banner-seccion-full > andino-text:nth-child(1)")'
+        self.titulo_planes_oferta_portabilidad = 'document.querySelector("#section-cards-movil > andino-tabs").shadowRoot.querySelector("#tab-portabilidad-quiero-ser-cliente-1-tab")'
+        # self.titulo_planes_oferta_portabilidad = 'document.querySelector("#conecta-a-quien > andino-banner-seccion-full > andino-text:nth-child(1)")'
 
         # Boton Plan 150 Gigas
         self.boton_plan_150_gigas = 'document.querySelector("#card-planes").shadowRoot.querySelector("swiper-container > swiper-slide.swiper-slide-active > div > div.footer > andino-button:nth-child(1)")'
 
-        # Boton Plan 350 Gigas
-        self.boton_plan_350_gigas = 'document.querySelector("#cards-planes-movil > swiper-slide.swiper-slide-next > eds-card-movil-2 > div > div.plan-content > div.card-body > div.action-button > eds-btn")'
+        # Boton Plan 450 Gigas
+        self.boton_plan_450_gigas = 'document.querySelector("#card-planes").shadowRoot.querySelector("swiper-container > swiper-slide.swiper-slide-next > div > div.footer > andino-button:nth-child(1)")'
 
         # Boton Plan Libre
-        self.boton_plan_libre = 'document.querySelector("#cards-planes-movil > swiper-slide:nth-child(3) > eds-card-movil-2 > div > div.plan-content > div.card-body > div.action-button > eds-btn")'
+        self.boton_plan_libre = 'document.querySelector("#card-planes").shadowRoot.querySelector("swiper-container > swiper-slide:nth-child(3) > div > div.footer > andino-button:nth-child(1)")'
 
         # Boton Plan Libre con Roaming
-        self.boton_plan_libre_con_roaming = 'document.querySelector("#cards-planes-movil > swiper-slide:nth-child(4) > eds-card-movil-2 > div > div.plan-content > div.card-body > div.action-button > eds-btn")'
+        self.boton_plan_libre_con_roaming = 'document.querySelector("#card-planes").shadowRoot.querySelector("swiper-container > swiper-slide:nth-child(4) > div > div.footer > andino-button:nth-child(1)")'
 
         # Boton Plan Libre con Roaming Pro
-        self.boton_plan_libre_con_roaming_pro = 'document.querySelector("#cards-planes-movil > swiper-slide:nth-child(5) > eds-card-movil-2 > div > div.plan-content > div.card-body > div.action-button > eds-btn")'
+        self.boton_plan_libre_con_roaming_pro = 'document.querySelector("#card-planes").shadowRoot.querySelector("swiper-container > swiper-slide:nth-child(5) > div > div.footer > andino-button:nth-child(1)")'
 
         # Boton Next Slide Swiper
-        self.boton_next_slide_swiper = 'document.querySelector("#cards-planes-movil").shadowRoot.querySelector("div > div.swiper-button-next")'
+        self.boton_next_slide_swiper = 'document.querySelector("#card-planes").shadowRoot.querySelector("swiper-container").shadowRoot.querySelector("div > div.swiper-button-next")'
 
     def get_text_titulo_planes_oferta_portabilidad(self):
         try:
@@ -56,15 +56,15 @@ class chile_planes_portabilidad_page(base_page):
         except Exception as ex:
             raise Exception(str(ex))
 
-    def click_boton_plan_350_gigas(self):
+    def click_boton_plan_450_gigas(self):
         try:
             super().carga_pagina()
-            element = self.wait_until_element_is_visible(self.boton_plan_350_gigas)
+            element = self.wait_until_element_is_visible(self.boton_plan_450_gigas)
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            # element.location_once_scrolled_into_view
+            element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -77,7 +77,7 @@ class chile_planes_portabilidad_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            # element.location_once_scrolled_into_view
+            element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -92,7 +92,7 @@ class chile_planes_portabilidad_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            # element.location_once_scrolled_into_view
+            element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -107,7 +107,7 @@ class chile_planes_portabilidad_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            # element.location_once_scrolled_into_view
+            element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -120,7 +120,7 @@ class chile_planes_portabilidad_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            # element.location_once_scrolled_into_view
+            element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))

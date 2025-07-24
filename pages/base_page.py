@@ -14,10 +14,6 @@ class base_page:
     def find_element_by_js(self, js_query):
         return self.driver.execute_script(f"return {js_query}")
 
-    def ingreso_URL(self, URL):
-        self.driver.maximize_window()
-        self.driver.get(URL)
-
     def is_displayed(self, element, timeout=10):
         try:
             WebDriverWait(self.driver, timeout).until(EC.visibility_of(element))

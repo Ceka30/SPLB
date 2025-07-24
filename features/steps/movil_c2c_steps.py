@@ -13,10 +13,10 @@ def selecciono_el_plan_movil(context, plan):
             "power ilim 79.90 sd": context.peru_planes_postpago_page.click_boton_plan_power_ilim_79_90_sd,
             "power ilim 99.90 sd": context.peru_planes_postpago_page.click_boton_plan_power_ilim_99_90_sd,
             "150 gigas": context.chile_planes_portabilidad_page.click_boton_plan_150_gigas,
-            "plan 350 gigas": context.chile_planes_portabilidad_page.click_boton_plan_350_gigas,
-            "plan libre": context.chile_planes_portabilidad_page.click_boton_plan_libre,
-            "plan libre con roaming": context.chile_planes_portabilidad_page.click_boton_plan_libre_con_roaming,
-            "plan libre con roaming pro": context.chile_planes_portabilidad_page.click_boton_plan_libre_con_roaming_pro,
+            "450 gigas": context.chile_planes_portabilidad_page.click_boton_plan_450_gigas,
+            "libre": context.chile_planes_portabilidad_page.click_boton_plan_libre,
+            "libre con roaming": context.chile_planes_portabilidad_page.click_boton_plan_libre_con_roaming,
+            "libre con roaming pro": context.chile_planes_portabilidad_page.click_boton_plan_libre_con_roaming_pro,
         }
         context.plan_movil = "portabilidad"
         if plan.strip().lower() == "power ilim 99.90 sd":
@@ -24,7 +24,7 @@ def selecciono_el_plan_movil(context, plan):
             time.sleep(1)
         elif plan.strip().lower() == "plan libre con roaming pro":
             context.chile_planes_portabilidad_page.click_boton_next_slide_swiper()
-            time.sleep(1)
+            time.sleep(2)
 
         click_plan = planes.get(plan.strip().lower())
 

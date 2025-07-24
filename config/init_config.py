@@ -131,9 +131,15 @@ def init_config(context, scenario):
     if not config["secret_key_user"] or not config["secret_key_jwt"]:
         raise ValueError("Error: Faltan SecretKeys.")
 
+    if scenario.tags:
+        ultimo_tag = scenario.tags[-1]
+        scenario.name = ultimo_tag
+    else:
+        ultimo_tag = scenario.name
+
     # Generar Encriptacion
     fecha_hora = (datetime.now() + timedelta(hours=-3)).strftime("%Y-%m-%d-%H:%M")
-    build_name = f"Ejecucion {scenario.name}-{fecha_hora}"
+    build_name = f"Ejecucion {ultimo_tag} --- {fecha_hora}"
 
     mensaje = f"{config['user_name']}@@@{fecha_hora}"
     user_encriptado = encriptar_aes(mensaje, config["secret_key_user"])
@@ -155,22 +161,30 @@ def init_config(context, scenario):
 
     # Configurar navegador
     options = webdriver.ChromeOptions()
+    options.add_argument("--start-maximized")
+    options.add_argument("--log-level=3")
+    options.add_argument("--incognito")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox")
+    # Configuracion de Lambdatest
     options.set_capability("platform", config["os"])
     options.set_capability("browserName", config["browser"])
     options.set_capability("browserVersion", config["browser_version"])
     options.set_capability("name", build_name)
     options.set_capability("build", build_name)
-    options.set_capability("video", True)  # Habilita grabación de video
-    options.set_capability("network", True)  # Registra tráfico de red
-    options.set_capability("console", "info")  # Registra logs de consola
+    # Activar Herramientas de depuración
+    options.set_capability("video", True)
+    options.set_capability("network", True)
+    options.set_capability("console", "info")
+    # options.set_capability("terminal", True)
     # options.set_capability("performance", True)
+    # options.set_capability("w3c", True)
     options.set_capability("customHeaders", custom_headers)
 
     remote_url = f"https://{config['user_name']}:{config['access_key']}@hub.lambdatest.com/wd/hub"
-
     driver = webdriver.Remote(command_executor=remote_url, options=options)
-    session_id = driver.session_id
 
+    session_id = driver.session_id
     LAMBDA_API_URL = "https://api.lambdatest.com/automation/api/v1/sessions"
     session_api_url = f"{LAMBDA_API_URL}/{session_id}"
 
@@ -183,35 +197,14 @@ def init_config(context, scenario):
     data = response.json()
     public_url = data["data"]["public_url"]
     video_url = data["data"]["video_url"]
-    flujo_name = scenario.name
+    flujo_name = ultimo_tag
 
     context.flujo_name = flujo_name
     context.build_name = build_name
     context.session_id = session_id
     context.public_url = public_url
     context.video_url = video_url
-    # name = scenario.name
 
-    # # Extraer parte base y sufijo tipo @1.1 si existe
-    # parts = name.split(" -- ")
-    # base_name = parts[0]
-    # suffix = f" -- {parts[1]}" if len(parts) > 1 else ""
-
-    # # Obtener valores del ejemplo
-    # if hasattr(scenario, "_row") and scenario._row:
-    #     plan = scenario._row.get("PLAN", "")
-    #     velocidad = scenario._row.get("VELOCIDAD", "")
-
-    #     # Construir nuevo nombre
-    #     new_name = f"{base_name} {plan} {velocidad}{suffix}"
-
-    #     # Actualizar el nombre del escenario (solo afecta logs / reportes personalizados)
-    #     scenario.name = new_name
-    #     context.full_scenario_name = new_name
-    # else:
-    #     context.full_scenario_name = name
-
-    # driver = browser_handler["chrome"]()
     context.driver = driver
     context.chile_internet_hogar_page = internet_hogar_page(driver)
     context.chile_contratacion_page = contratacion_page(driver)
