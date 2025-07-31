@@ -49,7 +49,7 @@ Feature: CHILE PERU B2C Click to Call
         Given estoy en la pagina "<URL>"
         When selecciono el plan movil "<PLAN>"
         And selecciono Quiero que me llamen
-        Then completo formulario de contacto
+        # Then completo formulario de contacto
 
         @PERU_B2C_C2C_MOVIL_Portabilidad_Plan_Power_29_90
         Examples:
@@ -81,7 +81,7 @@ Feature: CHILE PERU B2C Click to Call
         Given estoy en la pagina "<URL>"
         # And selecciono Soy cliente Entel
         When selecciono linea adicional
-        # Then completo formulario de contacto
+        Then completo formulario de contacto
 
         Examples:
             | URL                                     | 

@@ -24,7 +24,7 @@ def selecciono_el_plan_movil(context, plan):
             time.sleep(1)
         elif plan.strip().lower() == "plan libre con roaming pro":
             context.chile_planes_portabilidad_page.click_boton_next_slide_swiper()
-            time.sleep(2)
+            time.sleep(3)
 
         click_plan = planes.get(plan.strip().lower())
 

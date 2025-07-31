@@ -137,6 +137,15 @@ def init_config(context, scenario):
     else:
         ultimo_tag = scenario.name
 
+    if "CHILE" in ultimo_tag:
+        context.pais = "CHILE"
+    elif "PERU" in ultimo_tag:
+        context.pais = "PERU"
+    else:
+        raise ValueError(
+            "Error: No se ha definido un país válido en el TAG del escenario."
+        )
+
     # Generar Encriptacion
     fecha_hora = (datetime.now() + timedelta(hours=-3)).strftime("%Y-%m-%d-%H:%M")
     build_name = f"Ejecucion {ultimo_tag} --- {fecha_hora}"
@@ -172,6 +181,7 @@ def init_config(context, scenario):
     options.set_capability("browserVersion", config["browser_version"])
     options.set_capability("name", build_name)
     options.set_capability("build", build_name)
+    options.set_capability("project", f"Automatizacion {context.pais} QA")
     # Activar Herramientas de depuración
     options.set_capability("video", True)
     options.set_capability("network", True)

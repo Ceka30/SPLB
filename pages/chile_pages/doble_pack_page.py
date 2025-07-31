@@ -7,7 +7,7 @@ class doble_pack_page(base_page):
         self.driver = driver
 
         # Titulo Doble Pack
-        self.titulo_doble_pack = 'document.querySelector("#banner-seccion-principal > andino-text:nth-child(1)")'
+        self.titulo_doble_pack = 'document.querySelector("#banner-seccion-principal-1 > andino-text:nth-child(1)")'
 
         # Radio Plan Fibra 600
         self.boton_radio_fibra_600 = 'document.querySelector("#radio-planes-1").shadowRoot.querySelector("div > andino-input-label > andino-radio-button")'

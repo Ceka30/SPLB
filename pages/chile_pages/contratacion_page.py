@@ -7,16 +7,16 @@ class contratacion_page(base_page):
         self.driver = driver
 
         # Titulo Acceso Contratacion Online
-        self.titulo_contratacion_hogar = 'document.querySelector("#root > section > div > div > div.plan-container.col-12.col-lg-4.p-0 > div > div > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > div.first-content > andino-text-styler.body_1.title").shadowRoot.querySelector("p > span")'
+        self.titulo_contratacion_hogar = 'document.querySelector("#root > section > div > div > div.plan-container.col-12.col-lg-4.p-0 > div > div > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > div.first-content > andino-text-styler.body_1.title")'
 
         # Boton "Quiero que me llamen"
-        self.boton_C2C = 'document.querySelector("#root > section > div > div > div.flow-container.bg-neutral-050.col-12.col-lg-7.p-0 > div > div > div.choose-hiring-option > div > div > div.c2c-flow.mb-3 > andino-card-sm").shadowRoot.querySelector("div > div.content > andino-text-styler.title").shadowRoot.querySelector("p > span")'
+        self.boton_C2C = 'document.querySelector("#root > section > div > div > div.flow-container.col-12.offset-lg-1.col-lg-4 > div > div > div.choose-hiring-option > div > div > div.c2c-flow.mb-3 > andino-card-sm").shadowRoot.querySelector("div > div.content > andino-text-styler.title")'
 
         # Boton "Quiero contratar online"
         self.boton_contratar_online = 'document.querySelector("#root > section > div > div > div.flow-container.col-12.offset-lg-1.col-lg-4 > div > div > div.choose-hiring-option > div > div > div.digital-flow.mb-3 > andino-card-sm").shadowRoot.querySelector("div > a")'
 
         # Titulo Formulario
-        self.titulo_formulario = 'document.querySelector("#root > section > div > div > div.flow-container.bg-neutral-050.col-12.col-lg-7.p-0 > div > div > div.form-c2c.mb-4 > h2")'
+        self.titulo_formulario = 'document.querySelector("#root > section > div > div > div.flow-container.col-12.offset-lg-1.col-lg-4 > div > div > div.form-c2c.mb-4 > h2")'
 
         # Input telefono
         self.input_telefono = 'document.querySelector("#phoneC2c").shadowRoot.querySelector("#andino-input-phoneC2c")'
@@ -25,10 +25,10 @@ class contratacion_page(base_page):
         self.input_correo = 'document.querySelector("#emailC2c").shadowRoot.querySelector("#andino-input-emailC2c")'
 
         # Boton "Quiero que me llamen" para enviar formulario
-        self.boton_enviar = 'document.querySelector("#formC2C > eds-btn > button")'
+        self.boton_enviar = 'document.querySelector("#formC2C > eds-btn")'
 
         # Titulo solicitud ingresada
-        self.titulo_solicitud_ingresada = 'document.querySelector("#root > section > div > div > div.flow-container.bg-neutral-050.col-12.col-lg-7.p-0 > div > div > div > div > div > h3")'
+        self.titulo_solicitud_ingresada = 'document.querySelector("#root > section > div > div > div.flow-container.col-12.offset-lg-1.col-lg-6 > div > div > div > div > div > h3")'
 
     def get_text_titulo_contratacion_hogar(self):
         try:

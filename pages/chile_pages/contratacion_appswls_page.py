@@ -11,7 +11,7 @@ class chile_contratacion_appswls_page(base_page):
         self.titulo_contratacion_appswls = 'document.querySelector("#step")'
 
         # Titulo Velocidad Plan
-        self.titulo_velocidad_plan = 'document.querySelector("#form_datos > div > div.d-block.d-lg-flex > div.col-lg-3.col-md-5.col-12.px-md-0.px-2.mx-auto.mb-2.jqFlujoPlan > div > div:nth-child(1) > div.rediseño_nombrePlan.mx-auto > div > div > div:nth-child(1) > h3 > p")'
+        self.titulo_velocidad_plan = 'document.querySelector("#form_datos > div > div.d-block.d-lg-flex > div.col-lg-3.col-md-5.col-12.px-md-0.mb-2.jqFlujoPlan > div.rediseño-planes.ps-3.ps-md-2 > div:nth-child(1) > div.rediseño_nombrePlan.mx-auto > div > div > div:nth-child(1) > h3 > p")'
 
         # Lista Region
         self.lista_region = 'document.querySelector("#selReg")'

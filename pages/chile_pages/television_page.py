@@ -10,10 +10,10 @@ class television_page(base_page):
         self.titulo_television_hogar = 'document.querySelector("#banner-seccion-entel-tv > andino-text:nth-child(1)")'
 
         # Boton TV Full+
-        self.boton_tv_full_plus = 'document.querySelector("#tab-planes-hogar-entel-tv-4 > div > div > div > section > div > swiper-container > swiper-slide.swiper-slide-active > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
+        self.boton_tv_full_plus = 'document.querySelector("#tab-planes-hogar-entel-tv-4 > div > div > div > section > div > swiper-container > swiper-slide.swiper-slide-next > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
 
         # Boton TV Lite
-        # self.boton_tv_lite = 'document.querySelector("#tab-planes-hogar-entel-tv-4 > div > div > div > section > div > swiper-container > swiper-slide.swiper-slide-next > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
+        self.boton_tv_lite = 'document.querySelector("#tab-planes-hogar-entel-tv-4 > div > div > div > section > div > swiper-container > swiper-slide.swiper-slide-active > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
 
     def get_text_titulo_television_hogar(self):
         try:

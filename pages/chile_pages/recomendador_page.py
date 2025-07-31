@@ -172,7 +172,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -213,7 +213,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -226,7 +226,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -239,7 +239,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -267,7 +267,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -280,7 +280,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -306,7 +306,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -319,7 +319,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -345,7 +345,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -358,7 +358,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -373,7 +373,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -401,7 +401,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -416,7 +416,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -431,7 +431,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -459,7 +459,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -474,7 +474,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -489,7 +489,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -517,7 +517,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -532,7 +532,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -562,7 +562,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -577,7 +577,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -592,7 +592,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -622,7 +622,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -637,7 +637,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -665,7 +665,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -680,7 +680,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -695,7 +695,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -710,7 +710,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -740,7 +740,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))
@@ -755,7 +755,7 @@ class chile_recomendador_page(base_page):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             element.click()
         except Exception as ex:
             raise Exception(str(ex))

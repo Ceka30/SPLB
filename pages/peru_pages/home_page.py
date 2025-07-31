@@ -14,10 +14,10 @@ class peru_home_page(base_page):
         # self.titulo_banner_c2c = 'document.querySelector("#banner-formulario").shadowRoot.querySelector("#check_ad_2").shadowRoot.querySelector("div > div > andino-input-label").shadowRoot.querySelector("label > div.body_2-xs > andino-text > span > span")'
 
         # Input Telefono
-        self.input_telefono = 'document.querySelector("#banner-formulario").shadowRoot.querySelector("#my_phone_id_2").shadowRoot.querySelector("#andino-input-my_phone_id_2")'
+        self.input_telefono = 'document.querySelector("#my_phone_id_2").shadowRoot.querySelector("#andino-input-my_phone_id_2")'
 
         # Boton "Lo quiero"
-        self.boton_lo_quiero = 'document.querySelector("#banner-formulario").shadowRoot.querySelector("#acept_btn_primary_2")'
+        self.boton_lo_quiero = 'document.querySelector("#acept_btn_primary_2").shadowRoot.querySelector("#acept_btn_primary_2")'
 
         # Titulo solicitud ingresada
         self.titulo_solicitud_ingresada = 'document.querySelector("#modal").shadowRoot.querySelector("div > div.eds-modal-passive__content.col-12.col-sm-12.col-md-9.col-lg-6.col-xl-6.col-xxl-6 > div.eds-modal-passive__content__heading-title > p")'

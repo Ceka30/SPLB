@@ -7,7 +7,7 @@ class triple_pack_page(base_page):
         self.driver = driver
 
         # Titulo Doble Pack
-        self.titulo_triple_pack = 'document.querySelector("#banner-seccion-principal > andino-text:nth-child(1)")'
+        self.titulo_triple_pack = 'document.querySelector("#banner-seccion-principal-1 > andino-text:nth-child(1)")'
 
         # Radio Plan Fibra 600
         self.boton_radio_fibra_600 = 'document.querySelector("#radio-planes-1").shadowRoot.querySelector("div > andino-input-label > andino-radio-button")'
@@ -19,32 +19,32 @@ class triple_pack_page(base_page):
         self.boton_radio_fibra_giga = 'document.querySelector("#radio-planes-3").shadowRoot.querySelector("div > andino-input-label > andino-radio-button")'
 
         # Boton Fibra 600 TV Lite
-        self.boton_fibra_600_tv_lite = 'document.querySelector("#swiper-planes-section-1 > swiper-slide.swiper-slide-active > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
+        self.boton_fibra_600_tv_lite = 'document.querySelector("#swiper-planes-section-1 > swiper-slide.swiper-slide-next > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
 
         # Boton 600 TV Full+
-        self.boton_fibra_600_tv_full_plus = 'document.querySelector("#swiper-planes-section-1 > swiper-slide.swiper-slide-next > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
+        self.boton_fibra_600_tv_full_plus = 'document.querySelector("#swiper-planes-section-1 > swiper-slide.swiper-slide-active > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
 
         # Boton Fibra 800 TV Lite
-        self.boton_fibra_800_tv_lite = 'document.querySelector("#swiper-planes-section-2 > swiper-slide.swiper-slide-active > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
+        self.boton_fibra_800_tv_lite = 'document.querySelector("#swiper-planes-section-2 > swiper-slide.swiper-slide-next > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
 
         # Boton Fibra 800 TV Full+
-        self.boton_fibra_800_tv_full_plus = 'document.querySelector("#swiper-planes-section-2 > swiper-slide.swiper-slide-next > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
+        self.boton_fibra_800_tv_full_plus = 'document.querySelector("#swiper-planes-section-2 > swiper-slide.swiper-slide-active > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
 
         # Boton Fibra Giga TV Lite
-        self.boton_fibra_giga_tv_lite = 'document.querySelector("#swiper-planes-section-3 > swiper-slide.swiper-slide-active > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
+        self.boton_fibra_giga_tv_lite = 'document.querySelector("#swiper-planes-section-3 > swiper-slide.swiper-slide-next > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
 
         # Boton Fibra Giga TV Full+
-        self.boton_fibra_giga_tv_full_plus = 'document.querySelector("#swiper-planes-section-3 > swiper-slide.swiper-slide-next > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
+        self.boton_fibra_giga_tv_full_plus = 'document.querySelector("#swiper-planes-section-3 > swiper-slide.swiper-slide-active > andino-card-planes-hibrida").shadowRoot.querySelector("div > div.header > andino-button")'
 
     def get_text_titulo_triple_pack(self):
         try:
             super().carga_pagina()
-            element = self.wait_until_element_is_visible(self.titulo_doble_pack)
+            element = self.wait_until_element_is_visible(self.titulo_triple_pack)
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
                 print("Elemento no Disponible.")
-            element.location_once_scrolled_into_view
+            # element.location_once_scrolled_into_view
             return element.text
         except Exception as ex:
             raise Exception(str(ex))

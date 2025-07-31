@@ -1,7 +1,5 @@
 from datetime import datetime, timedelta
 import os
-
-import requests
 from config.init_config import init_config
 from utils.report_handler import (
     generar_informe,
@@ -24,6 +22,10 @@ def before_all(context):
     context.report_name = f"Reporte_QA_{context.fecha_ejecucion}".replace(":", "_")
     if not context.jira_issue_key:
         raise ValueError("No existe jira_issue_key.")
+
+    current_tags = str(context.config.tags)
+    if not current_tags:
+        raise ValueError("No existe TAG global de ejecucion.")
 
 
 def before_scenario(context, scenario):

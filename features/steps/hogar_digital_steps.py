@@ -40,7 +40,7 @@ def step_completar_formulario_de_factibilidad_para_la_velocidad(context, velocid
         time.sleep(1)
         attach_screenshot(context.driver)
         context.chile_contratacion_appswls_page.click_boton_continuar()
-        time.sleep(300)
+        time.sleep(5)
         assert (
             f"Estás contratando Internet {velocidad.strip()}"
             in context.chile_contratacion_appswls_page.get_text_titulo_resumen_contratacion()
