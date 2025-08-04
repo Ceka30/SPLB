@@ -74,13 +74,13 @@ sitios = {
         "peru",
     ],
     CHILE_URL_ENTEL_MOVIL_PLAN_ADICIONAL: [
-        "Plan adicional con descuento",
-        lambda context: context.chile_planes_portabilidad_page.get_text_titulo_planes_oferta_portabilidad(),
+        "Soy Cliente Entel",
+        lambda context: context.chile_planes_plan_adicional_page.get_text_titulo_planes_plan_adicional(),
         "chile",
     ],
     CHILE_URL_ENTEL_OFERTAS_MOVIL: [
-        "Portabilidad con plan",
-        lambda context: context.chile_planes_portabilidad_page.get_text_titulo_planes_oferta_portabilidad(),
+        "Planes móviles",
+        lambda context: context.chile_ofertas_movil_page.get_text_titulo_ofertas_movil(),
         "chile",
     ],
 }

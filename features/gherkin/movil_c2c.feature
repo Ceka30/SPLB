@@ -1,7 +1,7 @@
 @CHILE_PERU_B2C_C2C_MOVIL
 Feature: CHILE PERU B2C Click to Call 
 
-    @CHILE_B2C_C2C_MOVIL_Portabilidad
+    @CHILE_Monitoring @CHILE_B2C_C2C_MOVIL_Portabilidad
     Scenario Outline: CHILE B2C C2C Movil Portabilidad
         Given estoy en la pagina "<URL>"
         When selecciono el plan movil "<PLAN>"
@@ -33,7 +33,7 @@ Feature: CHILE PERU B2C Click to Call
         #     | URL                                | PLAN                  |
         #     | CHILE_URL_ENTEL_MOVIL_PORTABILIDAD | Libre con Roaming Pro |
 
-    @CHILE_B2C_C2C_MOVIL_LineaAdicional
+    @CHILE_Monitoring @CHILE_B2C_C2C_MOVIL_LineaAdicional
     Scenario Outline: CHILE B2C C2C Movil Linea Adicional
         Given estoy en la pagina "<URL>"
         When selecciono linea adicional
@@ -49,7 +49,7 @@ Feature: CHILE PERU B2C Click to Call
         Given estoy en la pagina "<URL>"
         When selecciono el plan movil "<PLAN>"
         And selecciono Quiero que me llamen
-        # Then completo formulario de contacto
+        Then completo formulario de contacto
 
         @PERU_B2C_C2C_MOVIL_Portabilidad_Plan_Power_29_90
         Examples:

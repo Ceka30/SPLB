@@ -7,10 +7,12 @@ class chile_planes_plan_adicional_page(base_page):
         self.driver = driver
 
         # Titulo Planes Plan Adicional
-        self.titulo_planes_plan_adicional = 'document.querySelector("#custom > main > section.contenedor-banner-seccion-transversal > div > andino-banner-seccion > andino-text:nth-child(1)")'
+        self.titulo_planes_plan_adicional = (
+            'document.querySelector("#soy-cliente-entel-1-1-tab")'
+        )
 
         # Boton "Conocer mi oferta"
-        self.boton_conocer_mi_oferta = 'document.querySelector("#cardHorizontalPlan").shadowRoot.querySelector("#btn-open-modal-contratar-planes-adicionales").shadowRoot.querySelector("#btn-open-modal-contratar-planes-adicionales")'
+        self.boton_conocer_mi_oferta = 'document.querySelector("#conecta-a-quien > andino-banner-seccion-full").shadowRoot.querySelector("div > div.container > div > andino-card-planes-horizontal").shadowRoot.querySelector("#btn-open-modal-contratar-planes-adicionales").shadowRoot.querySelector("#btn-open-modal-contratar-planes-adicionales")'
 
         # Titulo Side Bar
         self.titulo_side_bar = 'document.querySelector("#modal-title")'
@@ -30,7 +32,7 @@ class chile_planes_plan_adicional_page(base_page):
 
         # Boton quiero que me llamen
         self.boton_quiero_que_me_llamen = (
-            'document.querySelector("#eds-btn-llamen-conecta")'
+            'document.querySelector("#button-llamame-conecta")'
         )
 
         # Titulo Solicitud Ingresada

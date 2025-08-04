@@ -91,7 +91,7 @@ def step_selecciono_el_tipo_de_plan(context, tipo_plan):
         }
 
         planes_por_modulo = {
-            "doble-pack": {
+            "doble_pack": {
                 "fibra 600 tv lite": context.chile_doble_pack_page.click_boton_fibra_600_tv_lite,
                 "fibra 600 tv full+": context.chile_doble_pack_page.click_boton_fibra_600_tv_full_plus,
                 "fibra 800 tv lite": context.chile_doble_pack_page.click_boton_fibra_800_tv_lite,

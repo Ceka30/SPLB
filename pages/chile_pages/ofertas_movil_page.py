@@ -10,10 +10,12 @@ class chile_ofertas_movil_page(base_page):
         self.driver = driver
 
         # Titulo Ofertas Movil
-        self.titulo_ofertas_movil = 'document.querySelector("#custom > main > section.contenedor-banner-seccion-transversal > div > andino-banner-seccion > andino-text:nth-child(1)")'
+        self.titulo_ofertas_movil = 'document.querySelector("#planes-moviles-1-0-tab")'
 
         # Boton Modal "Quiero que me llamen"
-        self.boton_modal_quiero_que_me_llamen = 'document.querySelector("#custom > main > header > div > div > div > div > eds-btn")'
+        self.boton_modal_quiero_que_me_llamen = (
+            'document.querySelector("#headerBtnC2C")'
+        )
 
         # Titulo Modal
         self.titulo_modal = 'document.querySelector("#C2CModal > div > div.modal-content.medium-desk > div.modal-header > p")'

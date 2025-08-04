@@ -1,7 +1,7 @@
 @CHILE_PERU_B2C_FlujoDigital_Movil
 Feature: CHILE PERU Flujo Digital Movil
 
-    @CHILE_B2C_FlujoDigital_MOVIL_Portabilidad
+    @CHILE_Monitoring @CHILE_B2C_FlujoDigital_MOVIL_Portabilidad
     Scenario Outline: CHILE Flujo Digital Movil Portabilidad
         Given estoy en la pagina "<URL>"
         When selecciono el plan movil "<PLAN>"

@@ -1,7 +1,7 @@
 @CHILE_PERU_B2C_C2C_HOGAR
 Feature: CHILE B2C Click to Call Hogar 
 
-    @CHILE_B2C_C2C_InternetHogar
+    @CHILE_Monitoring @CHILE_B2C_C2C_InternetHogar
     Scenario Outline: CHILE C2C Internet Hogar
         Given estoy en la pagina "<URL>"
         And selecciono el plan "<PLAN>"
@@ -39,7 +39,7 @@ Feature: CHILE B2C Click to Call Hogar
             | URL                            | PLAN          | VELOCIDAD   |
             | CHILE_URL_ENTEL_HOGAR_INTERNET | Con Disney+   | Fibra Giga+ |
 
-    @CHILE_B2C_C2C_DoblePack
+    @CHILE_Monitoring @CHILE_B2C_C2C_DoblePack
     Scenario Outline: CHILE C2C Doble Pack
         Given estoy en la pagina "<URL>"
         And selecciono el plan "<PLAN>"
@@ -77,7 +77,7 @@ Feature: CHILE B2C Click to Call Hogar
             | URL                             | PLAN        | TIPO_PLAN           | 
             | CHILE_URL_ENTEL_HOGAR_DOBLEPACK | Fibra Giga  | Fibra Giga TV Full+ |
 
-    @CHILE_B2C_C2C_TriplePack
+    @CHILE_Monitoring @CHILE_B2C_C2C_TriplePack
     Scenario Outline: CHILE C2C Triple Pack
         Given estoy en la pagina "<URL>"
         And selecciono el plan "<PLAN>"
@@ -115,7 +115,7 @@ Feature: CHILE B2C Click to Call Hogar
             | URL                              | PLAN        | TIPO_PLAN           | 
             | CHILE_URL_ENTEL_HOGAR_TRIPLEPACK | Fibra Giga  | Fibra Giga TV Full+ |
 
-    @CHILE_B2C_C2C_Television
+    @CHILE_Monitoring @CHILE_B2C_C2C_Television
     Scenario Outline: CHILE C2C Television
         Given estoy en la pagina "<URL>"
         When selecciono el tipo de plan "<TIPO_PLAN>"
