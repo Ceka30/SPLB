@@ -16,7 +16,7 @@ estado = "Failed"
 def before_all(context):
     os.environ["ENVIRONMENT"] = context.config.userdata.get("environment", "produccion")
     context.jira_issue_key = context.config.userdata.get("jira_issue_key")
-    context.fecha_ejecucion = (datetime.now() + timedelta(hours=-3)).strftime(
+    context.fecha_ejecucion = (datetime.now() + timedelta(hours=-1)).strftime(
         "%Y-%m-%d %H:%M"
     )
     context.report_name = f"Reporte_QA_{context.fecha_ejecucion}".replace(":", "_")

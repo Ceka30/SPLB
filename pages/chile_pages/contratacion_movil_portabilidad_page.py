@@ -1,7 +1,7 @@
 from pages.base_page import base_page
 
 
-class chile_contratacion_movil_page(base_page):
+class chile_contratacion_movil_portabilidad_page(base_page):
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
@@ -13,7 +13,7 @@ class chile_contratacion_movil_page(base_page):
         self.boton_C2C = 'document.querySelector("#portabilidad-1-0 > div > div.c2c-flow.mb-3 > andino-card-sm").shadowRoot.querySelector("div > div.content > andino-text-styler.title").shadowRoot.querySelector("p > span")'
 
         # Boton Contratar en linea
-        self.boton_contratar_en_linea = 'document.querySelector("#portabilidad-1-0 > div > div.digital-flow.mb-3 > andino-card-sm")'
+        self.boton_contratar_en_linea = 'document.querySelector("#portabilidad-1-0 > div > div.digital-flow.mb-3 > andino-card-sm").shadowRoot.querySelector("div > div.content > andino-text-styler.title").shadowRoot.querySelector("p > span")'
 
         # Titulo Formulario
         self.titulo_formulario = 'document.querySelector("#root > section > div > div > div.flow-container.bg-neutral-050.col-12.col-lg-7.p-0 > div > div > div.form-c2c.mb-4 > p")'

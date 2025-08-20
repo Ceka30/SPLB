@@ -10,6 +10,7 @@
     "CHILE_URL_ENTEL_RECOMENDADOR": "https://www.entel.cl/hogar/recomendador",
     "CHILE_URL_ENTEL_EMPRESAS": "https://empresas.entel.cl",
     "CHILE_URL_ENTEL_MOVIL_PORTABILIDAD": "https://www.entel.cl/planes/oferta-portabilidad",
+    "CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA": "https://www.entel.cl/planes/linea-nueva",
     "CHILE_URL_ENTEL_MOVIL_PLAN_ADICIONAL": "https://www.entel.cl/planes/plan-adicional-con-descuento",
     "PERU_URL_ENTEL_MOVIL": "https://www.entel.pe/planes/postpago",
     "PERU_URL_ENTEL_MOVIL_LINEAS_ADICIONALES": "https://www.entel.pe/planes/postpago?modalidad=lineas-adicionales-postpago",

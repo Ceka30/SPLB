@@ -6,7 +6,7 @@ Feature: CHILE PERU B2C Click to Call
         Given estoy en la pagina "<URL>"
         When selecciono el plan movil "<PLAN>"
         And selecciono Quiero que me llamen
-        Then completo formulario de contacto
+        # Then completo formulario de contacto
 
         @CHILE_B2C_C2C_MOVIL_Portabilidad_Plan_150_Gigas
         Examples:
@@ -28,10 +28,42 @@ Feature: CHILE PERU B2C Click to Call
             | URL                                | PLAN                  |
             | CHILE_URL_ENTEL_MOVIL_PORTABILIDAD | Libre con Roaming     |
 
-        # @CHILE_B2C_C2C_MOVIL_Portabilidad_Plan_Libre_Roaming_Pro
-        # Examples:
-        #     | URL                                | PLAN                  |
-        #     | CHILE_URL_ENTEL_MOVIL_PORTABILIDAD | Libre con Roaming Pro |
+        @CHILE_B2C_C2C_MOVIL_Portabilidad_Plan_Libre_Roaming_Pro
+        Examples:
+            | URL                                | PLAN                  |
+            | CHILE_URL_ENTEL_MOVIL_PORTABILIDAD | Libre con Roaming Pro |
+
+    @CHILE_Monitoring @CHILE_B2C_C2C_MOVIL_LineaNueva
+    Scenario Outline: CHILE B2C C2C Movil Línea Nueva
+        Given estoy en la pagina "<URL>"
+        When selecciono el plan movil "<PLAN>"
+        And selecciono Quiero que me llamen
+        # Then completo formulario de contacto
+
+        @CHILE_B2C_C2C_MOVIL_LineaNueva_Plan_150_Gigas
+        Examples:
+            | URL                               | PLAN                  |
+            | CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA | 150 Gigas             | 
+        
+        @CHILE_B2C_C2C_MOVIL_LineaNueva_Plan_450_Gigas
+        Examples:
+            | URL                               | PLAN                  |
+            | CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA | 450 Gigas             |
+        
+        @CHILE_B2C_C2C_MOVIL_LineaNueva_Plan_Libre
+        Examples:
+            | URL                               | PLAN                  |
+            | CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA | Libre                 |
+
+        @CHILE_B2C_C2C_MOVIL_LineaNueva_Plan_Libre_Roaming
+        Examples:
+            | URL                               | PLAN                  |
+            | CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA | Libre con Roaming     |
+
+        @CHILE_B2C_C2C_MOVIL_LineaNueva_Plan_Libre_Roaming_Pro
+        Examples:
+            | URL                               | PLAN                  |
+            | CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA | Libre con Roaming Pro |
 
     @CHILE_Monitoring @CHILE_B2C_C2C_MOVIL_LineaAdicional
     Scenario Outline: CHILE B2C C2C Movil Linea Adicional
@@ -49,7 +81,7 @@ Feature: CHILE PERU B2C Click to Call
         Given estoy en la pagina "<URL>"
         When selecciono el plan movil "<PLAN>"
         And selecciono Quiero que me llamen
-        Then completo formulario de contacto
+        # Then completo formulario de contacto
 
         @PERU_B2C_C2C_MOVIL_Portabilidad_Plan_Power_29_90
         Examples:

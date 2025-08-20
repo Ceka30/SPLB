@@ -6,41 +6,57 @@ from utils.utils import attach_screenshot
 @when('selecciono el plan movil "{plan}"')
 def selecciono_el_plan_movil(context, plan):
     try:
+        pais = context.pais.strip().lower()
+        modulo = getattr(context, "modulo", "").strip().lower()
+        context.page, context.page_contratacion = (
+            (
+                context.chile_planes_linea_nueva_page,
+                context.chile_contratacion_movil_linea_nueva_page,
+            )
+            if modulo == "linea_nueva"
+            else (
+                context.chile_planes_portabilidad_page,
+                context.chile_contratacion_movil_portabilidad_page,
+            )
+        )
+
         planes = {
             "power 29.90": context.peru_planes_postpago_page.click_boton_plan_power_29_90,
             "power 39.90": context.peru_planes_postpago_page.click_boton_plan_power_39_90,
             "power ilim 69.90": context.peru_planes_postpago_page.click_boton_plan_power_ilim_69_90,
             "power ilim 79.90 sd": context.peru_planes_postpago_page.click_boton_plan_power_ilim_79_90_sd,
             "power ilim 99.90 sd": context.peru_planes_postpago_page.click_boton_plan_power_ilim_99_90_sd,
-            "150 gigas": context.chile_planes_portabilidad_page.click_boton_plan_150_gigas,
-            "450 gigas": context.chile_planes_portabilidad_page.click_boton_plan_450_gigas,
-            "libre": context.chile_planes_portabilidad_page.click_boton_plan_libre,
-            "libre con roaming": context.chile_planes_portabilidad_page.click_boton_plan_libre_con_roaming,
-            "libre con roaming pro": context.chile_planes_portabilidad_page.click_boton_plan_libre_con_roaming_pro,
+            "150 gigas": context.page.click_boton_plan_150_gigas,
+            "450 gigas": context.page.click_boton_plan_450_gigas,
+            "libre": context.page.click_boton_plan_libre,
+            "libre con roaming": context.page.click_boton_plan_libre_con_roaming,
+            "libre con roaming pro": context.page.click_boton_plan_libre_con_roaming_pro,
         }
+
         context.plan_movil = "portabilidad"
         if plan.strip().lower() == "power ilim 99.90 sd":
             context.peru_planes_postpago_page.click_boton_next_slide_swiper()
-            time.sleep(1)
-        elif plan.strip().lower() == "plan libre con roaming pro":
-            context.chile_planes_portabilidad_page.click_boton_next_slide_swiper()
-            time.sleep(3)
+        if plan.strip().lower() == "libre con roaming pro":
+            context.page.click_boton_next_slide_swiper()
+
+        time.sleep(3)
+
+        match pais:
+            case "chile":
+                get_titulo = (
+                    context.page_contratacion.get_text_titulo_contratacion_movil
+                )
+            case "peru":
+                get_titulo = (
+                    context.peru_contratacion_movil_page.get_text_titulo_contratacion
+                )
 
         click_plan = planes.get(plan.strip().lower())
-
         if not click_plan:
             raise ValueError(f"La velocidad '{plan}' no es válido")
 
         click_plan()
         time.sleep(2)
-
-        match context.pais:
-            case "chile":
-                get_titulo = context.chile_contratacion_movil_page.get_text_titulo_contratacion_movil
-            case "peru":
-                get_titulo = (
-                    context.peru_contratacion_movil_page.get_text_titulo_contratacion
-                )
 
         assert plan.strip() in get_titulo()
         attach_screenshot(context.driver)
@@ -54,10 +70,8 @@ def selecciono_quiero_que_me_llamen(context):
     try:
         match context.pais:
             case "chile":
-                click_C2C = context.chile_contratacion_movil_page.click_boton_C2C
-                get_titulo = (
-                    context.chile_contratacion_movil_page.get_text_titulo_formulario
-                )
+                click_C2C = context.page_contratacion.click_boton_C2C
+                get_titulo = context.page_contratacion.get_text_titulo_formulario
             case "peru":
                 click_C2C = context.peru_contratacion_movil_page.click_boton_C2C
                 get_titulo = (
@@ -138,12 +152,12 @@ def completo_formulario_de_contacto(context):
             case "chile":
                 modalidad = {
                     "portabilidad": {
-                        "ingresar_telefono": lambda: context.chile_contratacion_movil_page.send_keys_input_telefono(
+                        "ingresar_telefono": lambda: context.page_contratacion.send_keys_input_telefono(
                             "995959595"
                         ),
-                        "enviar_solicitud": context.chile_contratacion_movil_page.click_boton_boton_quiero_que_me_llamen,
+                        "enviar_solicitud": context.page_contratacion.click_boton_boton_quiero_que_me_llamen,
                         "solicitud_ingresada": lambda: "¡Recibimos tu solicitud!"
-                        in context.chile_contratacion_movil_page.get_text_titulo_solicitud_ingresada(),
+                        in context.page_contratacion.get_text_titulo_solicitud_ingresada(),
                     },
                     "linea_adicional": {
                         "ingresar_telefono": lambda: context.chile_planes_plan_adicional_page.send_keys_input_telefono(

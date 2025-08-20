@@ -15,6 +15,7 @@ from config.settings import (
     CHILE_URL_ENTEL_HOME,
     PERU_URL_ENTEL_HOME,
     PERU_URL_ENTEL_MOVIL_LINEAS_ADICIONALES,
+    CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA,
 )
 
 sitios = {
@@ -59,12 +60,17 @@ sitios = {
         "chile",
     ],
     CHILE_URL_ENTEL_MOVIL_PORTABILIDAD: [
-        "Quiero ser cliente",
+        "Portabilidad",
         lambda context: context.chile_planes_portabilidad_page.get_text_titulo_planes_oferta_portabilidad(),
         "chile",
     ],
+    CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA: [
+        "Línea nueva",
+        lambda context: context.chile_planes_linea_nueva_page.get_text_titulo_planes_linea_nueva(),
+        "chile",
+    ],
     PERU_URL_ENTEL_MOVIL: [
-        "¿Cuántas líneas deseas adquirir?",
+        "¿Cuántos planes deseas adquirir?",
         lambda context: context.peru_planes_postpago_page.get_text_titulo_planes_postpago_portabilidad(),
         "peru",
     ],
@@ -98,6 +104,8 @@ def step_ingreso_a_la_pagina(context, URL):
                 context.modulo = "internet_hogar"
             case "CHILE_URL_ENTEL_MOVIL_PORTABILIDAD":
                 context.modulo = "portabilidad"
+            case "CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA":
+                context.modulo = "linea_nueva"
             case "CHILE_URL_ENTEL_HOME":
                 context.modulo = "home_chile"
             case "PERU_URL_ENTEL_HOME":

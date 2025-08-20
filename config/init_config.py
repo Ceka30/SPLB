@@ -22,13 +22,19 @@ from pages.chile_pages.topo_fab_internet_hogar_page import (
 from pages.peru_pages.planes_postpago_page import peru_planes_postpago_page
 from pages.peru_pages.contratacion_movil_page import peru_contratacion_movil_page
 from pages.chile_pages.planes_portabilidad_page import chile_planes_portabilidad_page
+from pages.chile_pages.planes_linea_nueva_page import chile_planes_linea_nueva_page
 from pages.chile_pages.topo_fab_planes_portabilidad_page import (
     chile_topo_fab_planes_portabilidad_page,
 )
 from pages.chile_pages.planes_plan_adicional_page import (
     chile_planes_plan_adicional_page,
 )
-from pages.chile_pages.contratacion_movil_page import chile_contratacion_movil_page
+from pages.chile_pages.contratacion_movil_portabilidad_page import (
+    chile_contratacion_movil_portabilidad_page,
+)
+from pages.chile_pages.contratacion_movil_linea_nueva_page import (
+    chile_contratacion_movil_linea_nueva_page,
+)
 from pages.chile_pages.ofertas_movil_page import chile_ofertas_movil_page
 from pages.chile_pages.topo_fab_home_page import chile_topo_fab_home_page
 from pages.peru_pages.topo_fab_home_page import peru_topo_fab_home_page
@@ -229,11 +235,17 @@ def init_config(context, scenario):
     context.peru_planes_postpago_page = peru_planes_postpago_page(driver)
     context.peru_contratacion_movil_page = peru_contratacion_movil_page(driver)
     context.chile_planes_portabilidad_page = chile_planes_portabilidad_page(driver)
+    context.chile_planes_linea_nueva_page = chile_planes_linea_nueva_page(driver)
     context.chile_planes_plan_adicional_page = chile_planes_plan_adicional_page(driver)
     context.chile_topo_fab_planes_portabilidad_page = (
         chile_topo_fab_planes_portabilidad_page(driver)
     )
-    context.chile_contratacion_movil_page = chile_contratacion_movil_page(driver)
+    context.chile_contratacion_movil_portabilidad_page = (
+        chile_contratacion_movil_portabilidad_page(driver)
+    )
+    context.chile_contratacion_movil_linea_nueva_page = (
+        chile_contratacion_movil_linea_nueva_page(driver)
+    )
     context.chile_ofertas_movil_page = chile_ofertas_movil_page(driver)
     context.chile_topo_fab_home_page = chile_topo_fab_home_page(driver)
     context.peru_topo_fab_home_page = peru_topo_fab_home_page(driver)
