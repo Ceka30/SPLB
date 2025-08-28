@@ -19,7 +19,9 @@ class contratacion_page(base_page):
         self.titulo_formulario = 'document.querySelector("#root > section > div > div > div.flow-container.col-12.offset-lg-1.col-lg-4 > div > div > div.form-c2c.mb-4 > h2")'
 
         # Input telefono
-        self.input_telefono = 'document.querySelector("#phoneC2c").shadowRoot.querySelector("#andino-input-phoneC2c")'
+        self.input_telefono = (
+            'document.querySelector("#phoneC2c").shadowRoot.querySelector("#phoneC2c")'
+        )
 
         # Input correo
         self.input_correo = 'document.querySelector("#emailC2c").shadowRoot.querySelector("#andino-input-emailC2c")'

@@ -6,7 +6,7 @@ from utils.utils import attach_screenshot
 @step("selecciono contratar online movil")
 def step_selecciono_contratar_online_movil(context):
     try:
-        context.chile_contratacion_movil_page.click_boton_contratar_en_linea()
+        context.chile_contratacion_movil_portabilidad_page.click_boton_contratar_en_linea()
         time.sleep(1)
         assert (
             "Selecciona tipo de cliente y completa tu compra"

@@ -28,7 +28,7 @@ Feature: CHILE PERU Flujo Digital Movil
             | URL                                | PLAN                  |
             | CHILE_URL_ENTEL_MOVIL_PORTABILIDAD | Libre con Roaming     |
 
-        # @CHILE_B2C_FlujoDigital_MOVIL_Portabilidad_Libre_Roaming_Pro
-        # Examples:
-        #     | URL                                | PLAN                  |
-        #     | CHILE_URL_ENTEL_MOVIL_PORTABILIDAD | Libre con Roaming Pro |
+        @CHILE_B2C_FlujoDigital_MOVIL_Portabilidad_Libre_Roaming_Pro
+        Examples:
+            | URL                                | PLAN                  |
+            | CHILE_URL_ENTEL_MOVIL_PORTABILIDAD | Libre con Roaming Pro |
