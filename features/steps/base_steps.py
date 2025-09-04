@@ -16,6 +16,7 @@ from config.settings import (
     PERU_URL_ENTEL_HOME,
     PERU_URL_ENTEL_MOVIL_LINEAS_ADICIONALES,
     CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES,
 )
 
 sitios = {
@@ -88,6 +89,11 @@ sitios = {
         "Planes móviles",
         lambda context: context.chile_ofertas_movil_page.get_text_titulo_ofertas_movil(),
         "chile",
+    ],
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES: [
+        "Descubre el plan que va contigo",
+        lambda context: context.peru_oferta_promociones_page.get_text_titulo_oferta_promociones(),
+        "peru",
     ],
 }
 

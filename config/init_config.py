@@ -45,6 +45,7 @@ from pages.chile_pages.contratacion_miportal_page import (
     chile_contratacion_miportal_page,
 )
 from pages.chile_pages.contratacion_appswls_page import chile_contratacion_appswls_page
+from pages.peru_pages.oferta_promociones_page import peru_oferta_promociones_page
 
 # from config.browser_handler import browser_handler
 
@@ -254,3 +255,4 @@ def init_config(context, scenario):
     context.chile_login_miportal_page = chile_login_miportal_page(driver)
     context.chile_contratacion_miportal_page = chile_contratacion_miportal_page(driver)
     context.chile_contratacion_appswls_page = chile_contratacion_appswls_page(driver)
+    context.peru_oferta_promociones_page = peru_oferta_promociones_page(driver)

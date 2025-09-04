@@ -16,7 +16,18 @@
     "PERU_URL_ENTEL_MOVIL_LINEAS_ADICIONALES": "https://www.entel.pe/planes/postpago?modalidad=lineas-adicionales-postpago",
     "CHILE_URL_ENTEL_OFERTAS_MOVIL": "https://www.entel.cl/ofertas/planes-moviles",
     "CHILE_URL_ENTEL_CONTRATACION_600": "https://www.entel.cl/hogar/contrataciononline?id=internet-fibra-600-megas&lineas=1&oda=internet_card1&gen=hogar__internet",
-    "CHILE_URL_ENTEL_CONTRATACION_600Plus": "https://www.entel.cl/hogar/contrataciononline?id=internet-fibra-600-megas-streaming&lineas=1&oda=internet_card1&gen=hogar__internet"
+    "CHILE_URL_ENTEL_CONTRATACION_600Plus": "https://www.entel.cl/hogar/contrataciononline?id=internet-fibra-600-megas-streaming&lineas=1&oda=internet_card1&gen=hogar__internet",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_01": "https://www.entel.pe/ofertas-promociones/c2c-googlesem-landingoyp-marcaexacta",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_02": "https://www.entel.pe/ofertas-promociones/c2c-googlesem-landingoyp-porta-lima",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_03": "https://www.entel.pe/ofertas-promociones/c2c-googlesem-competencia",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_04": "https://www.entel.pe/ofertas-promociones/c2c-bing-oyp-performance",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_05": "https://www.entel.pe/ofertas-promociones/google",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_06": "https://www.entel.pe/ofertas-promociones/google-provincias",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_07": "https://www.entel.pe/ofertas-promociones/google-postpago",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_08": "https://www.entel.pe/ofertas-promociones/google-incentivos",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_09": "https://www.entel.pe/ofertas-promociones/c2c-googlesem-dgen",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_10": "https://www.entel.pe/ofertas-promociones/c2c-googlesem-pmax",
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_11": "https://www.entel.pe/ofertas-promociones/c2c-googlesem-genericas"
   },
   "preproduccion": {
     "CHILE_URL_ENTEL_HOME": "https://altiplano.entel.cl/pre-prod-personas-entel",
