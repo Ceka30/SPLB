@@ -79,7 +79,6 @@ Feature: CHILE B2C Topo Fab
     @PERU_B2C_C2C_OFERTA_PROMOCIONES_googlesem_dgen
     Scenario Outline: PERU B2C Click to Call Ofertas y Promociones
         Given estoy en la pagina "<URL>"
-        When selecciono Quiero que me contacten
         Then completo formulario para que me contacten del banner
         Examples:
             | URL                                   |
@@ -88,7 +87,6 @@ Feature: CHILE B2C Topo Fab
     @PERU_B2C_C2C_OFERTA_PROMOCIONES_10_googlesem_pmax
     Scenario Outline: PERU B2C Click to Call Ofertas y Promociones
         Given estoy en la pagina "<URL>"
-        When selecciono Quiero que me contacten
         Then completo formulario para que me contacten del banner
         Examples:
             | URL                                   |
@@ -97,7 +95,6 @@ Feature: CHILE B2C Topo Fab
     @PERU_B2C_C2C_OFERTA_PROMOCIONES_googlesem_genericas
     Scenario Outline: PERU B2C Click to Call Ofertas y Promociones
         Given estoy en la pagina "<URL>"
-        When selecciono Quiero que me contacten
         Then completo formulario para que me contacten del banner
         Examples:
             | URL                                   |
