@@ -16,8 +16,38 @@ from config.settings import (
     PERU_URL_ENTEL_HOME,
     PERU_URL_ENTEL_MOVIL_LINEAS_ADICIONALES,
     CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA,
-    PERU_URL_ENTEL_OFERTAS_PROMOCIONES,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_01,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_02,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_03,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_04,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_05,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_06,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_07,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_08,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_09,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_10,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_11,
 )
+
+SITIOS_PERU_PROMOCIONES = [
+    "Descubre el plan que va contigo",
+    lambda context: context.peru_oferta_promociones_page.get_text_titulo_oferta_promociones(),
+    "peru",
+]
+
+PROMOCIONES_PERU_URLS = [
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_01,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_02,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_03,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_04,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_05,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_06,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_07,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_08,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_09,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_10,
+    PERU_URL_ENTEL_OFERTAS_PROMOCIONES_11,
+]
 
 sitios = {
     CHILE_URL_ENTEL_HOME: [
@@ -90,12 +120,9 @@ sitios = {
         lambda context: context.chile_ofertas_movil_page.get_text_titulo_ofertas_movil(),
         "chile",
     ],
-    PERU_URL_ENTEL_OFERTAS_PROMOCIONES: [
-        "Descubre el plan que va contigo",
-        lambda context: context.peru_oferta_promociones_page.get_text_titulo_oferta_promociones(),
-        "peru",
-    ],
 }
+
+sitios.update({url: SITIOS_PERU_PROMOCIONES for url in PROMOCIONES_PERU_URLS})
 
 
 @given('estoy en la pagina "{URL}"')
@@ -125,8 +152,11 @@ def step_ingreso_a_la_pagina(context, URL):
         context.pais = pais
         context.driver.get(globals()[URL])
         time.sleep(2)
-        # context.driver.execute_script("document.body.style.zoom='70%'")
-        assert texto_esperado in get_titulo(context)
+        assert texto_esperado in get_titulo(context), (
+            f"El título no coincide.\n"
+            f"Esperado (contiene): {texto_esperado}\n"
+            f"Obtenido: {get_titulo(context)}"
+        )
         attach_screenshot(context.driver)
     except AssertionError as ex:
         attach_screenshot(context.driver)

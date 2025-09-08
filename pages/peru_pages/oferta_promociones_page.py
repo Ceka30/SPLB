@@ -28,11 +28,17 @@ class peru_oferta_promociones_page(base_page):
         # Input Telefono Modal
         self.input_telefono_modal = 'document.querySelector("#inputPhoneModalContratacionInactividad").shadowRoot.querySelector("#andino-input-inputPhoneModalContratacionInactividad")'
 
+        # Input Telefono Banner
+        self.input_telefono_banner = 'document.querySelector("#phoneInput").shadowRoot.querySelector("#andino-input-phoneInput")'
+
         # Boton "Llamame ahora"
         self.boton_llamame_ahora = 'document.querySelector("#btnLlamameAhoramodalContratacionOYP").shadowRoot.querySelector("#btnLlamameAhoramodalContratacionOYP")'
 
         # Boton "Llamame ahora" Modal
         self.boton_llamame_ahora_modal = 'document.querySelector("#btnLlamameAhoraInactividad").shadowRoot.querySelector("#btnLlamameAhoraInactividad")'
+
+        # Boton "Llamame ahora" Banner
+        self.boton_llamame_ahora_banner = 'document.querySelector("#btnLlamameForm").shadowRoot.querySelector("#btnLlamameForm")'
 
         # Titulo solicitud ingresada
         self.titulo_solicitud_ingresada = 'document.querySelector("#modalSuccess").shadowRoot.querySelector("div > div.eds-modal-passive__content.col-12.col-sm-12.col-md-10.col-lg-6.col-xl-6.col-xxl-5 > div > p")'
@@ -133,6 +139,19 @@ class peru_oferta_promociones_page(base_page):
         except Exception as ex:
             raise Exception(str(ex))
 
+    def send_keys_input_telefono_banner(self, telefono):
+        try:
+            super().carga_pagina()
+            element = self.wait_until_element_is_visible(self.input_telefono_banner)
+            if not super().is_displayed(element):
+                print("Elemento no Desplegado.")
+            if not super().is_enabled(element):
+                print("Elemento no Disponible.")
+            # element.location_once_scrolled_into_view
+            element.send_keys(telefono)
+        except Exception as ex:
+            raise Exception(str(ex))
+
     def click_boton_llamame_ahora(self):
         try:
             super().carga_pagina()
@@ -150,6 +169,21 @@ class peru_oferta_promociones_page(base_page):
         try:
             super().carga_pagina()
             element = self.wait_until_element_is_visible(self.boton_llamame_ahora_modal)
+            if not super().is_displayed(element):
+                print("Elemento no Desplegado.")
+            if not super().is_enabled(element):
+                print("Elemento no Disponible.")
+            # element.location_once_scrolled_into_view
+            element.click()
+        except Exception as ex:
+            raise Exception(str(ex))
+
+    def click_boton_llamame_ahora_banner(self):
+        try:
+            super().carga_pagina()
+            element = self.wait_until_element_is_visible(
+                self.boton_llamame_ahora_banner
+            )
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):

@@ -177,7 +177,8 @@ def init_config(context, scenario):
 
     # Configurar navegador
     options = webdriver.ChromeOptions()
-    options.add_argument("--start-maximized")
+    # options.add_argument("--start-maximized")
+    options.add_argument("--window-size=425,1080")
     options.add_argument("--log-level=3")
     options.add_argument("--incognito")
     options.add_argument("--disable-dev-shm-usage")
