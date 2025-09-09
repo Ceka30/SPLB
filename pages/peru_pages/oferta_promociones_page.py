@@ -14,7 +14,10 @@ class peru_oferta_promociones_page(base_page):
         self.boton_quiero_que_me_llamen = 'document.querySelector("#content > main > div > section.py-3 > div > div > andino-card-sm.mt-2.cardSmModal").shadowRoot.querySelector("div")'
 
         # Boton "Llama al numero"
-        self.boton_llama_al_numero = 'document.querySelector("#content > main > div > section.py-3 > div > div > andino-card-sm:nth-child(1)")'
+        self.boton_llama_al_numero = 'document.querySelector("#content > main > div > section.py-3 > div > div > andino-card-sm:nth-child(1)").shadowRoot.querySelector("div > a")'
+
+        # Boton "Llama al numero" Header
+        self.boton_llama_al_numero_header = 'document.querySelector("#content > main > andino-header-simple").shadowRoot.querySelector("#mi_id").shadowRoot.querySelector("#mi_id")'
 
         # Titulo Formulario
         self.titulo_formulario = 'document.querySelector("#modalContratacionOYP").shadowRoot.querySelector("div > div.eds-modal-passive__content.col-12.col-sm-12.col-md-10.col-lg-5.col-xl-5.col-xxl-4 > div > p")'
@@ -78,6 +81,21 @@ class peru_oferta_promociones_page(base_page):
         try:
             super().carga_pagina()
             element = self.wait_until_element_is_visible(self.boton_llama_al_numero)
+            if not super().is_displayed(element):
+                print("Elemento no Desplegado.")
+            if not super().is_enabled(element):
+                print("Elemento no Disponible.")
+            # element.location_once_scrolled_into_view
+            element.click()
+        except Exception as ex:
+            raise Exception(str(ex))
+
+    def click_boton_llama_al_numero_header(self):
+        try:
+            super().carga_pagina()
+            element = self.wait_until_element_is_visible(
+                self.boton_llama_al_numero_header
+            )
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):

@@ -18,6 +18,24 @@ def selecciono_quiero_que_me_contacten(context):
         raise AssertionError(ex)
 
 
+@when('selecciono llama al numero "{numero}"')
+def selecciono_llama_al_numero(context, numero):
+    try:
+        if context.device == "MOBILE":
+            context.peru_oferta_promociones_page.click_boton_llama_al_numero_header()
+        elif context.device == "DESKTOP":
+            context.peru_oferta_promociones_page.click_boton_llama_al_numero()
+        time.sleep(5)
+        assert (
+            "¡Aún no te vayas!"
+            in context.peru_oferta_promociones_page.get_text_titulo_formulario_modal()
+        )
+        attach_screenshot(context.driver)
+    except AssertionError as ex:
+        attach_screenshot(context.driver)
+        raise AssertionError(ex)
+
+
 @then("completo formulario para que me contacten")
 def completo_formulario_para_que_me_contacten(context):
     try:
@@ -29,6 +47,24 @@ def completo_formulario_para_que_me_contacten(context):
         assert (
             "Nos contactaremos contigo"
             in context.peru_oferta_promociones_page.get_text_titulo_solicitud_ingresada()
+        )
+        attach_screenshot(context.driver)
+    except AssertionError as ex:
+        attach_screenshot(context.driver)
+        raise AssertionError(ex)
+
+
+@then("completo formulario Aun no te vayas")
+def completo_formulario_aun_no_te_vayas(context):
+    try:
+        context.peru_oferta_promociones_page.send_keys_input_telefono_modal("959595959")
+        time.sleep(1)
+        attach_screenshot(context.driver)
+        context.peru_oferta_promociones_page.click_boton_llamame_ahora_modal()
+        time.sleep(3)
+        assert (
+            "Nos contactaremos contigo"
+            in context.peru_oferta_promociones_page.get_text_titulo_solicitud_ingresada_modal()
         )
         attach_screenshot(context.driver)
     except AssertionError as ex:

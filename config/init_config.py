@@ -177,8 +177,12 @@ def init_config(context, scenario):
 
     # Configurar navegador
     options = webdriver.ChromeOptions()
-    # options.add_argument("--start-maximized")
-    options.add_argument("--window-size=425,1080")
+    if "MOBILE" in ultimo_tag:
+        options.add_argument("--window-size=375,812")
+        context.device = "MOBILE"
+    else:
+        context.device = "DESKTOP"
+        options.add_argument("--start-maximized")
     options.add_argument("--log-level=3")
     options.add_argument("--incognito")
     options.add_argument("--disable-dev-shm-usage")
