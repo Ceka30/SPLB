@@ -21,13 +21,17 @@ def selecciono_topo_fab_quieres_contratar(context):
                 texto_obtenido = (
                     context.chile_topo_fab_home_page.get_text_titulo_fab_home
                 )
-            case "home_peru":
-                click_quieres_contratar = (
-                    context.peru_topo_fab_home_page.click_boton_quieres_contratar
-                )
+            case "oyf_peru":
+                click_quieres_contratar = context.peru_topo_fab_page.click_boton_quieres_contratar_ofertas_promociones
                 texto_obtenido = (
-                    context.peru_topo_fab_home_page.get_text_titulo_fab_home
+                    context.peru_oferta_promociones_page.get_text_titulo_formulario
                 )
+                texto_esperado = "Te ayudamos a contratar"
+            case "topofab_peru":
+                click_quieres_contratar = (
+                    context.peru_topo_fab_page.click_boton_quieres_contratar
+                )
+                texto_obtenido = context.peru_topo_fab_page.get_text_titulo_fab_home
                 texto_esperado = "¿Qué quieres contratar?"
 
         click_quieres_contratar()
@@ -56,11 +60,13 @@ def selecciono_contratar_por_telefono(context):
                     context.chile_topo_fab_home_page.click_boton_contratar_por_telefono
                 )
                 texto_obtenido = context.chile_topo_fab_home_page.get_text_titulo_te_ayudamos_a_contratar
-            case "home_peru":
+            case "topofab_peru":
                 click_contratar_por_telefono = (
-                    context.peru_topo_fab_home_page.click_boton_planes_moviles
+                    context.peru_topo_fab_page.click_boton_planes_moviles
                 )
-                texto_obtenido = context.peru_topo_fab_home_page.get_text_titulo_te_ayudamos_a_contratar
+                texto_obtenido = (
+                    context.peru_topo_fab_page.get_text_titulo_te_ayudamos_a_contratar
+                )
                 texto_esperado = "Te ayudamos a contratar"
 
         click_contratar_por_telefono()
@@ -97,13 +103,13 @@ def completo_con_mi_numero_de_contacto(context):
                 texto_obtenido_solicitud = (
                     context.chile_topo_fab_home_page.get_text_titulo_solicitud_ingresada
                 )
-            case "home_peru":
-                context.peru_topo_fab_home_page.send_keys_input_telefono("959595959")
+            case "topofab_peru":
+                context.peru_topo_fab_page.send_keys_input_telefono("959595959")
                 click_quiero_que_me_llamen = (
-                    context.peru_topo_fab_home_page.click_boton_quiero_que_me_llamen
+                    context.peru_topo_fab_page.click_boton_quiero_que_me_llamen
                 )
                 texto_obtenido_solicitud = (
-                    context.peru_topo_fab_home_page.get_text_titulo_solicitud_ingresada
+                    context.peru_topo_fab_page.get_text_titulo_solicitud_ingresada
                 )
                 texto_esperado = "¡Muchas gracias!"
 

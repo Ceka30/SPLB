@@ -37,7 +37,7 @@ from pages.chile_pages.contratacion_movil_linea_nueva_page import (
 )
 from pages.chile_pages.ofertas_movil_page import chile_ofertas_movil_page
 from pages.chile_pages.topo_fab_home_page import chile_topo_fab_home_page
-from pages.peru_pages.topo_fab_home_page import peru_topo_fab_home_page
+from pages.peru_pages.topo_fab_page import peru_topo_fab_page
 from pages.peru_pages.home_page import peru_home_page
 from pages.chile_pages.home_page import chile_home_page
 from pages.chile_pages.login_miportal_page import chile_login_miportal_page
@@ -178,7 +178,7 @@ def init_config(context, scenario):
     # Configurar navegador
     options = webdriver.ChromeOptions()
     if "MOBILE" in ultimo_tag:
-        options.add_argument("--window-size=375,812")
+        options.add_argument("--window-size=375,1080")
         context.device = "MOBILE"
     else:
         context.device = "DESKTOP"
@@ -254,7 +254,7 @@ def init_config(context, scenario):
     )
     context.chile_ofertas_movil_page = chile_ofertas_movil_page(driver)
     context.chile_topo_fab_home_page = chile_topo_fab_home_page(driver)
-    context.peru_topo_fab_home_page = peru_topo_fab_home_page(driver)
+    context.peru_topo_fab_page = peru_topo_fab_page(driver)
     context.peru_home_page = peru_home_page(driver)
     context.chile_home_page = chile_home_page(driver)
     context.chile_login_miportal_page = chile_login_miportal_page(driver)

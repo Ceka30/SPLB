@@ -27,7 +27,19 @@
     "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_08": "https://www.entel.pe/ofertas-promociones/google-incentivos",
     "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_09": "https://www.entel.pe/ofertas-promociones/c2c-googlesem-dgen",
     "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_10": "https://www.entel.pe/ofertas-promociones/c2c-googlesem-pmax",
-    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_11": "https://www.entel.pe/ofertas-promociones/c2c-googlesem-genericas"
+    "PERU_URL_ENTEL_OFERTAS_PROMOCIONES_11": "https://www.entel.pe/ofertas-promociones/c2c-googlesem-genericas",
+    "PERU_URL_ENTEL_TELEFONIA_FIJA": "https://www.entel.pe/hogar/telefonia/beneficios",
+    "PERU_URL_ENTEL_PREPAGO_BOLSAS": "https://www.entel.pe/prepago/bolsas",
+    "PERU_URL_ENTEL_PREPAGO_PLANES": "https://www.entel.pe/prepago/planes",
+    "PERU_URL_ENTEL_PREPAGO_RECARGAS": "https://www.entel.pe/prepago/recargas",
+    "PERU_URL_ENTEL_PREPAGO_BENEFICIOS": "https://www.entel.pe/prepago/beneficios",
+    "PERU_URL_ENTEL_RECAMBIOPOWER": "https://www.entel.pe/recambiopower",
+    "PERU_URL_ENTEL_SEGUROS": "https://www.entel.pe/seguros",
+    "PERU_URL_ENTEL_CHIP_AUTOACTIVADO": "https://www.entel.pe/chip-autoactivado",
+    "PERU_URL_ENTEL_APPLE": "https://www.entel.pe/apple",
+    "PERU_URL_ENTEL_AYUDA": "https://www.entel.pe/ayuda",
+    "PERU_URL_ENTEL_TIENDAS": "https://www.entel.pe/mapa/tiendas",
+    "PERU_URL_ENTEL_INFO_ABONADOS": "https://www.entel.pe/informacion-a-abonados-y-usuarios"
   },
   "preproduccion": {
     "CHILE_URL_ENTEL_HOME": "https://altiplano.entel.cl/pre-prod-personas-entel",

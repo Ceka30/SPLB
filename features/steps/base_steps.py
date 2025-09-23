@@ -27,6 +27,18 @@ from config.settings import (
     PERU_URL_ENTEL_OFERTAS_PROMOCIONES_09,
     PERU_URL_ENTEL_OFERTAS_PROMOCIONES_10,
     PERU_URL_ENTEL_OFERTAS_PROMOCIONES_11,
+    PERU_URL_ENTEL_TELEFONIA_FIJA,
+    PERU_URL_ENTEL_PREPAGO_BOLSAS,
+    PERU_URL_ENTEL_PREPAGO_PLANES,
+    PERU_URL_ENTEL_PREPAGO_RECARGAS,
+    PERU_URL_ENTEL_PREPAGO_BENEFICIOS,
+    PERU_URL_ENTEL_RECAMBIOPOWER,
+    PERU_URL_ENTEL_SEGUROS,
+    PERU_URL_ENTEL_CHIP_AUTOACTIVADO,
+    PERU_URL_ENTEL_APPLE,
+    PERU_URL_ENTEL_AYUDA,
+    PERU_URL_ENTEL_TIENDAS,
+    PERU_URL_ENTEL_INFO_ABONADOS,
 )
 
 SITIOS_PERU_PROMOCIONES = [
@@ -57,7 +69,7 @@ sitios = {
     ],
     PERU_URL_ENTEL_HOME: [
         "Quiero ser cliente",
-        lambda context: context.peru_topo_fab_home_page.get_text_titulo_home(),
+        lambda context: context.peru_topo_fab_page.get_text_titulo_home(),
         "peru",
     ],
     CHILE_URL_ENTEL_HOGAR_INTERNET: [
@@ -120,6 +132,66 @@ sitios = {
         lambda context: context.chile_ofertas_movil_page.get_text_titulo_ofertas_movil(),
         "chile",
     ],
+    PERU_URL_ENTEL_TELEFONIA_FIJA: [
+        "Telefonía Fija Inalámbrica",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_telefonia_fija(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_PREPAGO_BOLSAS: [
+        "Bolsas que se ajustan a ti!",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_prepago_bolsas(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_PREPAGO_PLANES: [
+        "Descubre tu plan prepago ideal",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_prepago_planes(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_PREPAGO_RECARGAS: [
+        "Recarga al toque a través de nuestros canales Entel",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_prepago_recargas(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_PREPAGO_BENEFICIOS: [
+        "¡Prestaluca al rescate!",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_prepago_beneficios(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_RECAMBIOPOWER: [
+        "Recambio Power",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_recambiopower(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_SEGUROS: [
+        "Mi Equipo Protegido",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_seguros(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_CHIP_AUTOACTIVADO: [
+        "Actívalo tu mismo",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_chip_autoactivado(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_APPLE: [
+        "Asegura tu iPhone",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_apple(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_AYUDA: [
+        "Resolvamos juntos todas tus dudas",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_ayuda(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_TIENDAS: [
+        "Conoce tu tienda más cercana y todo lo que te ofrecemos",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_tiendas(),
+        "peru",
+    ],
+    PERU_URL_ENTEL_INFO_ABONADOS: [
+        "Tu consulta en un solo lugar",
+        lambda context: context.peru_topo_fab_page.get_text_titulo_info_abonados(),
+        "peru",
+    ],
 }
 
 sitios.update({url: SITIOS_PERU_PROMOCIONES for url in PROMOCIONES_PERU_URLS})
@@ -132,21 +204,24 @@ def step_ingreso_a_la_pagina(context, URL):
         if not datos:
             raise ValueError(f"La URL del sitio '{URL}' no existe.")
 
-        match URL:
-            case "CHILE_URL_ENTEL_HOGAR_INTERNET":
-                context.modulo = "internet_hogar"
-            case "CHILE_URL_ENTEL_MOVIL_PORTABILIDAD":
-                context.modulo = "portabilidad"
-            case "CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA":
-                context.modulo = "linea_nueva"
-            case "CHILE_URL_ENTEL_HOME":
-                context.modulo = "home_chile"
-            case "PERU_URL_ENTEL_HOME":
-                context.modulo = "home_peru"
-            case "CHILE_URL_ENTEL_HOGAR_DOBLEPACK":
-                context.modulo = "doble_pack"
-            case "CHILE_URL_ENTEL_HOGAR_TRIPLEPACK":
-                context.modulo = "triple_pack"
+        if "OFERTAS_PROMOCIONES" in URL:
+            context.modulo = "oyf_peru"
+        elif "PERU" in URL:
+            context.modulo = "topofab_peru"
+        else:
+            match URL:
+                case "CHILE_URL_ENTEL_HOGAR_INTERNET":
+                    context.modulo = "internet_hogar"
+                case "CHILE_URL_ENTEL_MOVIL_PORTABILIDAD":
+                    context.modulo = "portabilidad"
+                case "CHILE_URL_ENTEL_MOVIL_LINEA_NUEVA":
+                    context.modulo = "linea_nueva"
+                case "CHILE_URL_ENTEL_HOME":
+                    context.modulo = "home_chile"
+                case "CHILE_URL_ENTEL_HOGAR_DOBLEPACK":
+                    context.modulo = "doble_pack"
+                case "CHILE_URL_ENTEL_HOGAR_TRIPLEPACK":
+                    context.modulo = "triple_pack"
 
         texto_esperado, get_titulo, pais = datos
         context.pais = pais
