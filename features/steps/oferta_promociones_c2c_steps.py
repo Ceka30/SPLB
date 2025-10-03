@@ -27,7 +27,7 @@ def selecciono_llama_al_numero(context, numero):
             context.peru_oferta_promociones_page.click_boton_llama_al_numero()
         time.sleep(5)
         assert (
-            "¡Aún no te vayas!"
+            "¡No te pierdas esta oferta!"
             in context.peru_oferta_promociones_page.get_text_titulo_formulario_modal()
         )
         attach_screenshot(context.driver)
@@ -60,10 +60,13 @@ def completo_formulario_aun_no_te_vayas(context):
         context.peru_oferta_promociones_page.send_keys_input_telefono_modal("959595959")
         time.sleep(1)
         attach_screenshot(context.driver)
-        context.peru_oferta_promociones_page.click_boton_llamame_ahora_modal()
+        if context.device == "MOBILE":
+            context.peru_oferta_promociones_page.click_boton_llamame_ahora_modal_mobile()
+        elif context.device == "DESKTOP":
+            context.peru_oferta_promociones_page.click_boton_llamame_ahora_modal_desktop()
         time.sleep(3)
         assert (
-            "Nos contactaremos contigo"
+            "¡Tu solicitud ha sido registrada!"
             in context.peru_oferta_promociones_page.get_text_titulo_solicitud_ingresada_modal()
         )
         attach_screenshot(context.driver)

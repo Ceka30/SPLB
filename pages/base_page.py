@@ -14,7 +14,7 @@ class base_page:
     def find_element_by_js(self, js_query):
         return self.driver.execute_script(f"return {js_query}")
 
-    def is_displayed(self, element, timeout=10):
+    def is_displayed(self, element, timeout=30):
         try:
             WebDriverWait(self.driver, timeout).until(EC.visibility_of(element))
             return True
@@ -32,7 +32,7 @@ class base_page:
             print("Exception al elemento {element}: " + str(ex))
             return False
 
-    def wait_until_element_is_visible(self, js_query, timeout=10):
+    def wait_until_element_is_visible(self, js_query, timeout=30):
         try:
             return WebDriverWait(self.driver, timeout).until(
                 lambda driver: driver.execute_script(

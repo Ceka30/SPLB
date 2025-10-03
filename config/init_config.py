@@ -154,7 +154,7 @@ def init_config(context, scenario):
         )
 
     # Generar Encriptacion
-    fecha_hora = (datetime.now() + timedelta(hours=-3)).strftime("%Y-%m-%d-%H:%M")
+    fecha_hora = (datetime.now() + timedelta(hours=0)).strftime("%Y-%m-%d-%H:%M")
     build_name = f"Ejecucion {ultimo_tag} --- {fecha_hora}"
 
     mensaje = f"{config['user_name']}@@@{fecha_hora}"
@@ -193,7 +193,7 @@ def init_config(context, scenario):
     options.set_capability("browserVersion", config["browser_version"])
     options.set_capability("name", build_name)
     options.set_capability("build", build_name)
-    options.set_capability("project", f"Automatizacion {context.pais} QA")
+    options.set_capability("project", f"C2C OyP {context.pais} - Automatizacion")
     # Activar Herramientas de depuración
     options.set_capability("video", True)
     options.set_capability("network", True)

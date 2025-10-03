@@ -23,7 +23,7 @@ class peru_oferta_promociones_page(base_page):
         self.titulo_formulario = 'document.querySelector("#modalContratacionOYP").shadowRoot.querySelector("div > div.eds-modal-passive__content.col-12.col-sm-12.col-md-10.col-lg-5.col-xl-5.col-xxl-4 > div > p")'
 
         # Titulo Formulario Modal
-        self.titulo_formulario_modal = 'document.querySelector("#modalContratacionInactividadOYP").shadowRoot.querySelector("div > div.eds-modal-passive__content.col-12.col-sm-12.col-md-10.col-lg-5.col-xl-5.col-xxl-4 > div > p")'
+        self.titulo_formulario_modal = 'document.querySelector("#modalContratacionInactividadOYP > div > div > div > div.modal-content > div.title > p")'
 
         # Input Telefono
         self.input_telefono = 'document.querySelector("#inputPhoneModalContratacionmodalContratacionOYP").shadowRoot.querySelector("#andino-input-inputPhoneModalContratacionmodalContratacionOYP")'
@@ -38,7 +38,8 @@ class peru_oferta_promociones_page(base_page):
         self.boton_llamame_ahora = 'document.querySelector("#btnLlamameAhoramodalContratacionOYP").shadowRoot.querySelector("#btnLlamameAhoramodalContratacionOYP")'
 
         # Boton "Llamame ahora" Modal
-        self.boton_llamame_ahora_modal = 'document.querySelector("#btnLlamameAhoraInactividad").shadowRoot.querySelector("#btnLlamameAhoraInactividad")'
+        self.boton_llamame_ahora_modal_mobile = 'document.querySelector("#btnMobileLlamameAhoraInactividad").shadowRoot.querySelector("#btnMobileLlamameAhoraInactividad")'
+        self.boton_llamame_ahora_modal_desktop = 'document.querySelector("#btnLlamameAhoraInactividad").shadowRoot.querySelector("#btnLlamameAhoraInactividad")'
 
         # Boton "Llamame ahora" Banner
         self.boton_llamame_ahora_banner = 'document.querySelector("#btnLlamameForm").shadowRoot.querySelector("#btnLlamameForm")'
@@ -47,7 +48,7 @@ class peru_oferta_promociones_page(base_page):
         self.titulo_solicitud_ingresada = 'document.querySelector("#modalSuccess").shadowRoot.querySelector("div > div.eds-modal-passive__content.col-12.col-sm-12.col-md-10.col-lg-6.col-xl-6.col-xxl-5 > div > p")'
 
         # Titulo solicitud ingresada Modal
-        self.titulo_solicitud_ingresada_modal = 'document.querySelector("#modalSuccessInactividad").shadowRoot.querySelector("div > div.eds-modal-passive__content.col-12.col-sm-12.col-md-10.col-lg-6.col-xl-6.col-xxl-5 > div > p")'
+        self.titulo_solicitud_ingresada_modal = 'document.querySelector("#modalSuccessInactividad").shadowRoot.querySelector("div > div.eds-modal-passive__content.col-12.col-sm-12.col-md-10.col-lg-10.col-xl-7.col-xxl-5 > div > p")'
 
     def get_text_titulo_oferta_promociones(self):
         try:
@@ -183,10 +184,27 @@ class peru_oferta_promociones_page(base_page):
         except Exception as ex:
             raise Exception(str(ex))
 
-    def click_boton_llamame_ahora_modal(self):
+    def click_boton_llamame_ahora_modal_mobile(self):
         try:
             super().carga_pagina()
-            element = self.wait_until_element_is_visible(self.boton_llamame_ahora_modal)
+            element = self.wait_until_element_is_visible(
+                self.boton_llamame_ahora_modal_mobile
+            )
+            if not super().is_displayed(element):
+                print("Elemento no Desplegado.")
+            if not super().is_enabled(element):
+                print("Elemento no Disponible.")
+            # element.location_once_scrolled_into_view
+            element.click()
+        except Exception as ex:
+            raise Exception(str(ex))
+
+    def click_boton_llamame_ahora_modal_desktop(self):
+        try:
+            super().carga_pagina()
+            element = self.wait_until_element_is_visible(
+                self.boton_llamame_ahora_modal_desktop
+            )
             if not super().is_displayed(element):
                 print("Elemento no Desplegado.")
             if not super().is_enabled(element):
