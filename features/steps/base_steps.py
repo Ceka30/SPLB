@@ -118,7 +118,7 @@ sitios = {
         "peru",
     ],
     PERU_URL_ENTEL_MOVIL_LINEAS_ADICIONALES: [
-        "Líneas Adicionales",
+        "Soy cliente Entel",
         lambda context: context.peru_planes_postpago_page.get_text_titulo_planes_postpago_linea_adicional(),
         "peru",
     ],
@@ -148,7 +148,7 @@ sitios = {
         "peru",
     ],
     PERU_URL_ENTEL_PREPAGO_RECARGAS: [
-        "Recarga al toque a través de nuestros canales Entel",
+        "Recarga al toque a través de nuestros canales digitales Entel",
         lambda context: context.peru_topo_fab_page.get_text_titulo_prepago_recargas(),
         "peru",
     ],
@@ -158,7 +158,7 @@ sitios = {
         "peru",
     ],
     PERU_URL_ENTEL_RECAMBIOPOWER: [
-        "Recambio Power",
+        "Explora una nueva forma de comprar tu celular",
         lambda context: context.peru_topo_fab_page.get_text_titulo_recambiopower(),
         "peru",
     ],

@@ -10,10 +10,10 @@ class peru_planes_postpago_page(base_page):
         self.titulo_planes_postpago_portabilidad = 'document.querySelector("#custom > main > section.mb-5.pt-4.pt-md-4.container.o-hidden > p")'
 
         # Boton Soy Cliente Entel
-        self.boton_soy_cliente_entel = 'ddocument.querySelector("#tabs_opciones").shadowRoot.querySelector("#tab-portabilidad-soy-cliente-entel-2-tab")'
+        self.boton_soy_cliente_entel = 'document.querySelector("#tabs_opciones").shadowRoot.querySelector("#tab-portabilidad-soy-cliente-entel-2-tab")'
 
-        # Titulo Planes Postpago Linaa Adicional
-        self.titulo_planes_postpago_linea_adicional = 'document.querySelector("#banner-small-image-principal").shadowRoot.querySelector("div > div.header-content.false > div.epigraph-content > andino-text-styler").shadowRoot.querySelector("p > span")'
+        # Titulo Planes Postpago Linea Adicional
+        self.titulo_planes_postpago_linea_adicional = 'document.querySelector("#tabs_opciones").shadowRoot.querySelector("#tab-portabilidad-soy-cliente-entel-2-tab > span")'
 
         # Boton Plan Power 29.90
         self.boton_plan_power_29_90 = 'document.querySelector("#card-planes").shadowRoot.querySelector("#plan-simple")'

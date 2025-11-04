@@ -26,8 +26,8 @@ class peru_topo_fab_page(base_page):
         self.titulo_prepago_beneficios = 'document.querySelector("#custom > main > div.container.py-3 > div > div > andino-banner-small-image").shadowRoot.querySelector("div > div.header-content.false > div.title-content > andino-text-styler").shadowRoot.querySelector("p > span")'
 
         # Titulo RecambioPower
-        self.titulo_recambiopower = 'document.querySelector("#custom > main > div.container.py-3 > div > div > andino-banner-small-image").shadowRoot.querySelector("div > div.header-content.false > div.title-content > andino-text-styler").shadowRoot.querySelector("p > span")'
-
+        # self.titulo_recambiopower = 'document.querySelector("#custom > main > div.container.py-3 > div > div > andino-banner-small-image").shadowRoot.querySelector("div > div.header-content.false > div.title-content > andino-text-styler").shadowRoot.querySelector("p > span")'
+        self.titulo_recambiopower = 'document.querySelector("#custom > main > div.container.py-md-5.py-4 > div > div.col-lg-4.offset-lg-1 > h3")'
         # Titulo Seguros
         self.titulo_seguros = 'document.querySelector("#banner-seccion-principal > andino-text:nth-child(1) > p > span")'
 
@@ -35,7 +35,8 @@ class peru_topo_fab_page(base_page):
         self.titulo_chip_autoactivado = 'document.querySelector("#custom > main > div.container.py-3 > div > div > andino-banner-small-image").shadowRoot.querySelector("div > div.header-content.false > div.title-content > andino-text-styler").shadowRoot.querySelector("p > span")'
 
         # Titulo Apple
-        self.titulo_apple = 'document.querySelector("#custom > main > div:nth-child(8) > div > div > andino-banner-complementario-imagen").shadowRoot.querySelector("div > div.header-content > slot:nth-child(2) > andino-text-styler").shadowRoot.querySelector("p > span")'
+        # self.titulo_apple = 'document.querySelector("#custom > main > div:nth-child(8) > div > div > andino-banner-complementario-imagen").shadowRoot.querySelector("div > div.header-content > slot:nth-child(2) > andino-text-styler").shadowRoot.querySelector("p > span")'
+        self.titulo_apple = 'document.querySelector("#custom > main > div:nth-child(8) > div > div > div > div > andino-banner-complementario-imagen").shadowRoot.querySelector("div > div.header-content > slot:nth-child(2) > andino-text-styler").shadowRoot.querySelector("p > span")'
 
         # Titulo Ayuda
         self.titulo_ayuda = 'document.querySelector("#banner-seccion-principal > andino-text:nth-child(2) > p > span")'

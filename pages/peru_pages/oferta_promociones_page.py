@@ -17,7 +17,7 @@ class peru_oferta_promociones_page(base_page):
         self.boton_llama_al_numero = 'document.querySelector("#content > main > div > section.py-3 > div > div > andino-card-sm:nth-child(1)").shadowRoot.querySelector("div > a")'
 
         # Boton "Llama al numero" Header
-        self.boton_llama_al_numero_header = 'document.querySelector("#content > main > andino-header-simple").shadowRoot.querySelector("#mi_id").shadowRoot.querySelector("#mi_id")'
+        self.boton_llama_al_numero_header = 'document.querySelector("#content > main > andino-header-simple").shadowRoot.querySelector("#mi_id")'
 
         # Titulo Formulario
         self.titulo_formulario = 'document.querySelector("#modalContratacionOYP").shadowRoot.querySelector("div > div.eds-modal-passive__content.col-12.col-sm-12.col-md-10.col-lg-5.col-xl-5.col-xxl-4 > div > p")'
